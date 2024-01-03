@@ -1,8 +1,6 @@
 {
     "maven.view": "flat",
     "java.project.sourcePaths": [
-        "loggythings/latestRelease",
-        "loggythings/LoggyThings",
-        "loggythings/src/main/java/com/robostangs/loggythings"
+        "loggythings/repo"
     ]
 }

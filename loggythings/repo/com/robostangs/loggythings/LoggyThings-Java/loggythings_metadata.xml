@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.robostangs.loggythings</groupId>
+  <artifactId>LoggyThings-java</artifactId>
+  <versioning>
+    <latest>1.0</latest>
+    <release>1.0</release>
+    <versions>
+    <version>1.0</version>
+      <!-- <version>2024.0.0-beta-6.2</version>
+      <version>2024.0.0-beta-6.1</version>
+      <version>2024.0.0-beta-6</version>
+      <version>2024.0.0-beta-5.1</version>
+      <version>2024.0.0-beta-5</version>
+      <version>2024.0.0-beta-4</version>
+      <version>2024.0.0-beta-3</version>
+      <version>2024.0.0-beta-1</version>
+      <version>2023.4.4</version>
+      <version>2023.4.3</version>
+      <version>2023.4.2</version>
+      <version>2023.4.1</version>
+      <version>2023.4.0</version>
+      <version>2022.2.1</version> -->
+    </versions>
+    <lastUpdated>20240102164200</lastUpdated>
+  </versioning>
+</metadata>
