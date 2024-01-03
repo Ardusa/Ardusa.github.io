@@ -6,7 +6,7 @@
     "mavenUrls": [
         "https://ardusa.github.io/loggythings/repo"
     ],
-    "jsonUrl": "https://ardusa.github.io//LoggyThings.json",
+    "jsonUrl": "https://ardusa.github.io/LoggyThings/LoggyThings.json",
     "javaDependencies": [
         {
             "groupId": "com.robostangs.loggythings",
