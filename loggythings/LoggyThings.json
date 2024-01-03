@@ -10,7 +10,7 @@
     "javaDependencies": [
         {
             "groupId": "com.robostangs.loggythings",
-            "artifactId": "LoggyThings-java",
+            "artifactId": "LoggyThings-Java",
             "version": "1.0"
         }
     ],
