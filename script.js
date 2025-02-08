@@ -9,19 +9,19 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Auto collapse sidebar
-const sidebar = document.getElementById('sidebar');
+// // Auto collapse sidebar
+// const sidebar = document.getElementById('sidebar');
 
-sidebar.addEventListener('mouseenter', () => {
-    sidebar.classList.remove('collapsed');
-});
+// sidebar.addEventListener('mouseenter', () => {
+//     sidebar.classList.remove('collapsed');
+// });
 
-sidebar.addEventListener('mouseleave', () => {
-    sidebar.classList.add('collapsed');
-});
+// sidebar.addEventListener('mouseleave', () => {
+//     sidebar.classList.add('collapsed');
+// });
 
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => sidebar.classList.add('collapsed'), 300);
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     setTimeout(() => sidebar.classList.add('collapsed'), 300);
+// });
 
 console.log("Welcome to Ardusa's Personal Website!");
