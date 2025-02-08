@@ -36,14 +36,19 @@ const tags = [
         className: 'tag-cyan'
     },
     {
-        name: 'CSS',
+        name: 'WebSockets',
         color: 'purple',
         className: 'tag-purple'
     },
     {
-        name: 'Node.js',
+        name: 'AI',
         color: 'brown',
         className: 'tag-brown'
+    },
+    {
+        name: 'SQL',
+        color: 'dark-green',
+        className: 'tag-dark-green'
     }
 ];
 

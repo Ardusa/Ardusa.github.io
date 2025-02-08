@@ -39,7 +39,7 @@
 
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        const selectedTags = tags.filter(tag => ['Java', 'Python', 'Project Management'].includes(tag.name));
+                        const selectedTags = tags.filter(tag => ['Java', 'Project Management', 'Python'].includes(tag.name));
                         const container = document.getElementById('tags-container-1');
                         selectedTags.forEach(tag => {
                             const tagElement = createTag(tag);
@@ -65,7 +65,7 @@
 
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        const selectedTags = tags.filter(tag => ['Python', 'React', 'JavaScript', 'HTML'].includes(tag.name));
+                        const selectedTags = tags.filter(tag => ['React', 'JavaScript', 'HTML'].includes(tag.name));
                         const container = document.getElementById('tags-container-3');
                         selectedTags.forEach(tag => {
                             const tagElement = createTag(tag);
@@ -83,9 +83,9 @@
                         class="fab fa-github"></i> View Project</button>
             </div>
 
-            <p style="margin-bottom: 2px;">This is a project I completed during Spartahack X and is also the first Hackathon project I ever
+            <p style="margin-bottom: 5px;">This is a project I completed during Spartahack X and is also the first Hackathon project I ever
                 participated in. At SpartaHack X our team won the Best Game award.</p>
-            <p style="margin-top: 2px;">In this projects, I worked on the computer vision, using the camera to detect gestures which would
+            <p style="margin-top: 5px;">In this projects, I worked on the computer vision, using the camera to detect gestures which would
                 then translate to game actions.</p>
             <div class="tags" id="tags-container-2">
 
@@ -94,6 +94,33 @@
                         const selectedTags = tags.filter(tag => ['Python', 'Computer Vision', 'Project Management'].includes(tag.name));
                         const container = document.getElementById('tags-container-2');
                         selectedTags.forEach(tag => {
+                            const tagElement = createTag(tag);
+                            container.appendChild(tagElement);
+                        });
+                    });
+                </script>
+            </div>
+
+        </div>
+
+        <div class="project-card">
+            <div class="header">
+                <h2>Chello Backend</h2>
+                <button class="github-link" onclick="window.open('https://github.com/Ardusa/chello-backend', '_blank')"><i
+                        class="fab fa-github"></i> View Project</button>
+            </div>
+
+            <p style="margin-bottom: 5px;">This is the backend code for the Chello project I have been working on. Chello is an app for businesses or individuals software engineers to help build a schedule and mantain throughout production.</p>
+            <p style="margin-top: 5px;">This code handles all of the AI features of the app, such as prioritization logic, dependency detection, and it also handles the websocket connections as well as the SQL database.</p>
+            <div class="tags" id="tags-container-4">
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const selectedTags = tags.filter(tag => ['Python', 'AI', 'WebSockets', 'SQL'].includes(tag.name));
+                        const container = document.getElementById('tags-container-4');
+                        selectedTags.forEach(tag => {
+                            console.log(tag);
+                            console.log(container);
                             const tagElement = createTag(tag);
                             container.appendChild(tagElement);
                         });
