@@ -45,19 +45,19 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 20px 0px;
 }
+
 .floating-container {
     position: relative;
-    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 20px 0px 0px 0px;
+    transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.1);
     padding: 3rem 10rem;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1;
     text-align: center;
-    box-sizing: border-box;
-    width: 83%;
+    width: fit-content;
 }
 
 .floating-container h1 {
@@ -67,7 +67,7 @@ body {
 
 .floating-container p {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 .card {
@@ -171,6 +171,32 @@ button.contact:hover {
     transform: scale(1.05) rotate(-1deg);
 }
 
+button.home {
+    background-color: #ffffff;
+    border-radius: 100px;
+    --box-shadow: rgba(200, 200, 200, .2) 0 -25px 18px -14px inset, rgba(200, 200, 200, .15) 0 1px 2px, rgba(200, 200, 200, .15) 0 2px 4px, rgba(200, 200, 200, .15) 0 4px 8px, rgba(200, 200, 200, .15) 0 8px 16px, rgba(200, 200, 200, .15) 0 16px 32px;
+    box-shadow: var(--box-shadow);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 5px;
+}
+
+button.home:hover {
+    box-shadow: rgba(200, 200, 200, .35) 0 -25px 18px -14px inset, rgba(200, 200, 200, .25) 0 1px 2px, rgba(200, 200, 200, .25) 0 2px 4px, rgba(200, 200, 200, .25) 0 4px 8px, rgba(200, 200, 200, .25) 0 8px 16px, rgba(200, 200, 200, .25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
 button.github-link {
     appearance: none;
     background-color: #000000;
@@ -216,6 +242,8 @@ button.github-link:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
+    margin: 30px 0px;
 }
 
 .project-card {
@@ -236,11 +264,12 @@ button.github-link:active {
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    background: rgba(88, 88, 88, 0.479);
+    transition: transform 0.6s ease, box-shadow 0.6s ease, background 0.6s ease;
 }
 
 .project-card {
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transition: transform 0.6s ease, box-shadow 0.6s ease, background 0.6s ease;
 }
 
 .project-card h2 {
@@ -248,7 +277,7 @@ button.github-link:active {
 }
 
 .project-card p {
-
+    
 }
 
 .project-card button {
