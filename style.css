@@ -738,3 +738,72 @@ form.contact-form label {
     margin-top: 10px;
     margin-left: 10px;
 }
+
+@media (max-width: 600px) {
+    .floating-centered-container {
+        padding: 2rem 5rem;
+        width: 90%;
+    }
+
+    .floating-centered-container h1 {
+        font-size: 30px;
+    }
+
+    .floating-centered-container p {
+        margin: 10px 0px;
+    }
+
+    .title-container {
+        padding: 2rem 5rem;
+    }
+
+    .title-container h1 {
+        font-size: 30px;
+    }
+
+    .title-container p {
+        margin: 5px 0px;
+    }
+
+    .project-card {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .project-card h2 {
+        font-size: 28px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .tags span {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .contact-form-container {
+        margin: 20px 0px;
+    }
+
+    form.contact-form {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    form.contact-form .inputs {
+        gap: 10px;
+    }
+
+    form.contact-form button.submit-form {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
