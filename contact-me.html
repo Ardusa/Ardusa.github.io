@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ardusa's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <div class="floating-container">
+        <h1>Contact Me</h1>
+        <p>If for some reason you want to talk to me, my links are down below!</p>
+        <button class="home" onclick="window.location.href='./index.html'">Home Page</button>
+        <button class="past-projects" onclick="window.location.href='./past-projects.html'">Past Projects</button>
+        <button class="about" onclick="window.location.href='./about-me.html'">About Me</button>
+    </div>
+
+    <div class="container">
+        <h2>Feel free to reach out to me!</h2>
+        <p>I love making projects and investigating cutting edge technology!</p>
+        <div class="links">
+            <button class="linkedin" onclick="window.open('https://www.linkedin.com/in/ardusa/', '_blank')"><i
+                    class="fab fa-linkedin"></i> LinkedIn</button>
+            <button class="github" onclick="window.open('https://www.github.com/ardusa/', '_blank')"><i
+                    class="fab fa-github"></i> GitHub</button>
+            <button class="instagram" onclick="window.open('https://www.linkedin.com/in/ardusa/', '_blank')"><i
+                    class="fab fa-instagram"></i> Instagram</button>
+            <!-- <button class="resume" onclick="openForm()">Want my resume!</button> -->
+            <!-- <button class="resume" onclick="openForm()">Request Resume</button> -->
+        </div>
+        <form class="contact-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="resumeForm" class="form-overlay">
+        <div class="form-container">
+            <span class="close-btn" onclick="closeForm()">&times;</span>
+            <h2>Request My Resume</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function openForm() {
+            document.getElementById("resumeForm").style.display = "flex";
+        }
+
+        function closeForm() {
+            document.getElementById("resumeForm").style.display = "none";
+        }
+    </script>
+    <!-- <div class="" -->
+    <!-- also need a section for links like linkedin, instagram, github, email -->
+
+    <footer>
+        <p>&copy; 2025 Ankur</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

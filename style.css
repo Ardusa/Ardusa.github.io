@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -85,7 +86,7 @@ footer {
     margin: 10px 0px;
 }
 
-.card {
+.project-container .card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -93,7 +94,7 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.project-container .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -244,6 +245,19 @@ button.github-link:active {
     transform: translateY(0);
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
 .project-container {
     display: flex;
     flex-wrap: wrap;
@@ -299,6 +313,94 @@ button.github-link:active {
     /* top: 90%; */
     margin-bottom: 0px;
 }
+
+.form-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.links {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 60px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+
+.links button {
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 3;
+    outline: transparent;
+    padding: 0 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.links button.linkedin {
+    background: linear-gradient(to bottom right, #0077b5, #005582);
+}
+
+button.linkedin:not([disabled]):focus,
+button.linkedin:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 119, 181, 0.5), -.125rem -.125rem 1rem rgba(0, 119, 181, 0.5), .125rem .125rem 1rem rgba(0, 119, 181, 0.5);
+}
+
+.links button.github {
+    background: linear-gradient(to bottom right, #000000, #434343);
+}
+
+button.github:not([disabled]):focus,
+button.github:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 0, 0, 0.5), .125rem .125rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.links button.instagram {
+    background: linear-gradient(to bottom right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+button.instagram:not([disabled]):focus,
+button.instagram:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(188, 24, 136, 0.5), -.125rem -.125rem 1rem rgba(188, 24, 136, 0.5), .125rem .125rem 1rem rgba(188, 24, 136, 0.5);
+}
+
+.links button.resume {
+    background: #ff0000;
+}
+
+button.resume:not([disabled]):focus,
+button.resume:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(255, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(255, 0, 0, 0.5), .125rem .125rem 1rem rgba(255, 0, 0, 0.5);
+}
+
 
 .tags {
     margin: 10px 0px;
@@ -688,3 +790,105 @@ button.github-link:active {
     -webkit-filter: saturate(0.2) opacity(0.5);
     cursor: not-allowed;
 }
+
+.timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.timeline .card {
+    position: relative;
+    max-width: 400px;
+}
+
+/* setting padding based on even or odd */
+.timeline .card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+
+.timeline .card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+
+.timeline .card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid orangered;
+}
+
+.timeline .card:nth-child(odd)::before {
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+
+@media only screen and (max-width: 400px) {
+    .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
+}
+
+.timeline .card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.timeline .card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+.timeline .card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+.timeline .card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+.timeline .info {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+    color: gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.timeline .title {
+    color: orangered;
+    position: relative;
+}
+
+.timeline .title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid orangered;
+}
+
+.timeline .card:nth-child(even)>.info>.title {
+    text-align: right;
+}
+
+.timeline .card:nth-child(odd)>.info>.title::before {
+    left: -45px;
+}
+
+.timeline .card:nth-child(even)>.info>.title::before {
+    right: -45px;
+}
+
