@@ -667,6 +667,8 @@ button.resume:not([disabled]):hover {
     flex-direction: column;
     gap: 10px;
     margin: 40px 0px;
+    width: 100%;
+    align-items: center;
 }
 
 .contact-form-container h2,
@@ -680,6 +682,7 @@ form.contact-form {
     flex-direction: row;
     gap: 50px;
     margin-top: 20px;
+    width: 100%
 }
 
 form.contact-form .inputs {
@@ -688,6 +691,8 @@ form.contact-form .inputs {
     gap: 15px;
     text-align: left;
     font-family: "Roboto", sans-serif;
+    width: 100%;
+    margin-left: auto;
 }
 
 form.contact-form button.submit-form {
@@ -715,7 +720,7 @@ form.contact-form button.submit-form {
 form.contact-form .input-box {
     border-radius: 20px;
     padding: 15px;
-    width: 500px;
+    width: auto;
     font-family: "Roboto", sans-serif;
 }
 
