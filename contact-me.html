@@ -7,13 +7,14 @@
     <title>Ardusa's Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="particles-js"></div>
 
-    <div class="floating-container">
+    <div class="title-container">
         <h1>Contact Me</h1>
         <p>If for some reason you want to talk to me, my links are down below!</p>
         <button class="home" onclick="window.location.href='./index.html'">Home Page</button>
@@ -22,58 +23,53 @@
     </div>
 
     <div class="container">
-        <h2>Feel free to reach out to me!</h2>
-        <p>I love making projects and investigating cutting edge technology!</p>
-        <div class="links">
-            <button class="linkedin" onclick="window.open('https://www.linkedin.com/in/ardusa/', '_blank')"><i
-                    class="fab fa-linkedin"></i> LinkedIn</button>
-            <button class="github" onclick="window.open('https://www.github.com/ardusa/', '_blank')"><i
-                    class="fab fa-github"></i> GitHub</button>
-            <button class="instagram" onclick="window.open('https://www.linkedin.com/in/ardusa/', '_blank')"><i
-                    class="fab fa-instagram"></i> Instagram</button>
-            <!-- <button class="resume" onclick="openForm()">Want my resume!</button> -->
-            <!-- <button class="resume" onclick="openForm()">Request Resume</button> -->
-        </div>
-        <!-- <form class="contact-form">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-            <button type="submit">Submit</button>
-        </form> -->
-    </div>
+        <div class="contact-form-container">
+            <h2>Feel free to reach out to me!</h2>
+            <p>I love making projects and investigating cutting edge technology!</p>
+            <form onsubmit="submit()" class="contact-form">
+                <div class="inputs">
 
-    <div id="resumeForm" class="form-overlay">
-        <div class="form-container">
-            <span class="close-btn" onclick="closeForm()">&times;</span>
-            <h2>Request My Resume</h2>
-            <form>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
-                <button type="submit">Submit</button>
+                    <label for="subject"><strong>Subject</strong></label>
+                    <input class="input-box" type="text" id="subject" name="subject" placeholder="Hi i'm Ankur and I have a cool project idea!"
+                        required>
+
+                    <label for="description"><strong>Description</strong></label>
+                    <textarea style="margin-bottom: 50px" class="input-box" id="description" name="description" rows="4"
+                        placeholder="You want a job bro" required></textarea>
+                </div>
+
+                <div class="buttons">
+                    <div class="links">
+                        <button class="linkedin"
+                            onclick="window.open('https://www.linkedin.com/in/ardusa/', '_blank')"><i
+                                class="fab fa-linkedin"></i> LinkedIn</button>
+                        <button class="github" onclick="window.open('https://www.github.com/ardusa/', '_blank')"><i
+                                class="fab fa-github"></i> GitHub</button>
+                        <button class="instagram"
+                            onclick="window.open('https://www.linkedin.com/in/ardusa/', '_blank')"><i
+                                class="fab fa-instagram"></i> Instagram</button>
+                    </div>
+                    <hr style="width: 100%; border: 1px solid #ecf0f1;">
+                    <button class="submit-form" type="submit"><strong>Send me an email!</strong></button>
+                </div>
             </form>
         </div>
     </div>
 
 
-    <script>
-        function openForm() {
-            document.getElementById("resumeForm").style.display = "flex";
-        }
-
-        function closeForm() {
-            document.getElementById("resumeForm").style.display = "none";
-        }
-    </script>
-    <!-- <div class="" -->
-    <!-- also need a section for links like linkedin, instagram, github, email -->
-
     <footer>
         <p>&copy; 2025 Ankur</p>
     </footer>
 
+    <script>
+        function submit() {
+            var subject = document.getElementById('subject').value;
+            var description = document.getElementById('description').value;
+            var mailto_link = 'mailto:ardusa05@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(description);
+            window.location.href = mailto_link;
+            alert("Thank you for sending me an email! I will get back to you as soon as possible.");
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="particles-config.js"></script>
     <script src="script.js"></script>

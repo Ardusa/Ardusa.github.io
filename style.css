@@ -23,7 +23,7 @@ footer {
     background-color: rgba(18, 18, 18, 0.7);
     color: white;
     text-align: center;
-    padding: 5px 0px;
+    padding: 24px 0px;
     margin-top: auto;
 }
 
@@ -50,22 +50,22 @@ footer {
     text-align: center;
     box-sizing: border-box;
     width: 83%;
+    font-family: 'Comic Sans MS', sans-serif;
 }
 
 .floating-centered-container h1 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 50px;
     margin: 0px;
 }
 
 .floating-centered-container p {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 20px 0px;
 }
 
-.floating-container {
+.title-container {
     position: relative;
     left: 50%;
-    margin: 20px 0px 0px 0px;
+    margin: 20px 0px 30px 0px;
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.1);
     padding: 3rem 10rem;
@@ -76,13 +76,14 @@ footer {
     width: fit-content;
 }
 
-.floating-container h1 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+.title-container h1 {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 40px;
     margin: 0px;
 }
 
-.floating-container p {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+.title-container p {
+    font-family: 'Comic Sans MS', sans-serif;
     margin: 10px 0px;
 }
 
@@ -253,9 +254,10 @@ button.github-link:active {
     height: 100%;
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
-    margin: 20px;
+    margin: 20px 60px 40px 60px;
     padding: 20px;
     border-radius: 20px;
+    height: fit-content;
 }
 
 .project-container {
@@ -263,7 +265,8 @@ button.github-link:active {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    margin: 30px 0px;
+    margin: 0px;
+    margin-bottom: 20px;
 }
 
 .project-card {
@@ -334,16 +337,13 @@ button.github-link:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .links {
-    margin: 20px 0px;
+    margin: 0px 10px;
     display: flex;
     flex-wrap: nowrap;
-    gap: 60px;
+    gap: 40px;
     width: 100%;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 500;
 }
 
 .links button {
@@ -352,10 +352,11 @@ button.github-link:active {
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-size: 20px;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
     line-height: 3;
     outline: transparent;
-    padding: 0 1.5rem;
+    padding: 3px 5px;
     text-align: center;
     text-decoration: none;
     transition: box-shadow .2s ease-in-out;
@@ -363,6 +364,7 @@ button.github-link:active {
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
+    width: 90px;
 }
 
 .links button.linkedin {
@@ -791,104 +793,73 @@ button.resume:not([disabled]):hover {
     cursor: not-allowed;
 }
 
-.timeline {
-    background: var(--primary-color);
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.timeline .card {
-    position: relative;
-    max-width: 400px;
-}
-
-/* setting padding based on even or odd */
-.timeline .card:nth-child(odd) {
-    padding: 30px 0 30px 30px;
-}
-
-.timeline .card:nth-child(even) {
-    padding: 30px 30px 30px 0;
-}
-
-.timeline .card::before {
-    content: "";
-    position: absolute;
-    width: 50%;
-    border: solid orangered;
-}
-
-.timeline .card:nth-child(odd)::before {
-    left: 0px;
-    top: -4.5px;
-    bottom: -4.5px;
-    border-width: 5px 0 5px 5px;
-    border-radius: 50px 0 0 50px;
-}
-
-@media only screen and (max-width: 400px) {
-    .card:nth-child(odd)::before {
-        top: -5px;
-        bottom: -5px;
-    }
-}
-
-.timeline .card:nth-child(even)::before {
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-width: 5px 5px 5px 0;
-    border-radius: 0 50px 50px 0;
-}
-
-.timeline .card:first-child::before {
-    border-top: 0;
-    border-top-left-radius: 0;
-}
-
-.timeline .card:last-child:nth-child(odd)::before {
-    border-bottom: 0;
-    border-bottom-left-radius: 0;
-}
-
-.timeline .card:last-child:nth-child(even)::before {
-    border-bottom: 0;
-    border-bottom-right-radius: 0;
-}
-
-.timeline .info {
+.contact-form-container {
     display: flex;
     flex-direction: column;
-    background: #333;
-    color: gray;
-    border-radius: 10px;
-    padding: 10px;
+    gap: 10px;
+    margin: 40px 0px;
 }
 
-.timeline .title {
-    color: orangered;
-    position: relative;
+.contact-form-container h2, p {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
 }
 
-.timeline .title::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 999px;
-    border: 3px solid orangered;
+form.contact-form {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 20px;
 }
 
-.timeline .card:nth-child(even)>.info>.title {
-    text-align: right;
+form.contact-form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
 }
 
-.timeline .card:nth-child(odd)>.info>.title::before {
-    left: -45px;
+form.contact-form button.submit-form {
+    background-color: #f98585;
+    border-radius: 100px;
+    --box-shadow: rgba(187, 44, 44, .2) 0 -25px 18px -14px inset, rgba(187, 44, 44, .15) 0 1px 2px, rgba(187, 44, 44, .15) 0 2px 4px, rgba(187, 44, 44, .15) 0 4px 8px, rgba(187, 44, 44, .15) 0 8px 16px, rgba(187, 44, 44, .15) 0 16px 32px;
+    box-shadow: var(--box-shadow);
+    color: rgb(128, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    padding: 25px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: fit-content;
+    width: 90%;
 }
 
-.timeline .card:nth-child(even)>.info>.title::before {
-    right: -45px;
+form.contact-form .input-box {
+    border-radius: 20px;
+    padding: 15px;
+    width: 500px;
+    font-family: "Roboto", sans-serif;
 }
 
+form.contact-form .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin: auto 0px auto 0px;
+}
+
+form.contact-form label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
