@@ -696,11 +696,11 @@ form.contact-form .inputs {
 }
 
 form.contact-form button.submit-form {
-    background-color: #f98585;
+    background-color: #85a9f9;
     border-radius: 100px;
-    --box-shadow: rgba(187, 44, 44, .2) 0 -25px 18px -14px inset, rgba(187, 44, 44, .15) 0 1px 2px, rgba(187, 44, 44, .15) 0 2px 4px, rgba(187, 44, 44, .15) 0 4px 8px, rgba(187, 44, 44, .15) 0 8px 16px, rgba(187, 44, 44, .15) 0 16px 32px;
+    --box-shadow: rgba(44, 44, 187, .2) 0 -25px 18px -14px inset, rgba(44, 44, 187, .15) 0 1px 2px, rgba(44, 44, 187, .15) 0 2px 4px, rgba(44, 44, 187, .15) 0 4px 8px, rgba(44, 44, 187, .15) 0 8px 16px, rgba(44, 44, 187, .15) 0 16px 32px;
     box-shadow: var(--box-shadow);
-    color: rgb(128, 0, 0);
+    color: rgb(0, 0, 128);
     cursor: pointer;
     display: inline-block;
     font-family: "Roboto", sans-serif;
@@ -718,7 +718,7 @@ form.contact-form button.submit-form {
 }
 
 form.contact-form button.submit-form:hover {
-    box-shadow: rgba(187, 44, 44, .35) 0 -25px 18px -14px inset, rgba(187, 44, 44, .25) 0 1px 2px, rgba(187, 44, 44, .25) 0 2px 4px, rgba(187, 44, 44, .25) 0 4px 8px, rgba(187, 44, 44, .25) 0 8px 16px, rgba(187, 44, 44, .25) 0 16px 32px;
+    box-shadow: rgba(44, 44, 187, .35) 0 -25px 18px -14px inset, rgba(44, 44, 187, .25) 0 1px 2px, rgba(44, 44, 187, .25) 0 2px 4px, rgba(44, 44, 187, .25) 0 4px 8px, rgba(44, 44, 187, .25) 0 8px 16px, rgba(44, 44, 187, .25) 0 16px 32px;
     transform: translateY(5px)
 }
 
