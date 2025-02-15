@@ -726,6 +726,7 @@ form.contact-form .input-box {
     border-radius: 20px;
     padding: 15px;
     width: auto;
+    border: solid;
     font-family: "Roboto", sans-serif;
 }
 
