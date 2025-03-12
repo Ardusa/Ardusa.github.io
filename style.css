@@ -503,7 +503,7 @@ button.resume:not([disabled]):hover {
 }
 
 .tag-blue {
-    background-color: rgba(66, 66, 192, 0.364);
+    background-color: rgba(66, 66, 192, 0.164);
     color: #5050ff;
     transition: 200ms;
     font-size: 16px;
@@ -527,7 +527,7 @@ button.resume:not([disabled]):hover {
 
 .tag-pink {
     background-color: rgba(255, 192, 203, 0.27);
-    color: #b7005e;
+    color: #ff51ab;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
@@ -619,7 +619,7 @@ button.resume:not([disabled]):hover {
 
 .tag-brown {
     background-color: rgba(112, 71, 71, 0.24);
-    color: #411010;
+    color: #b35959;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
