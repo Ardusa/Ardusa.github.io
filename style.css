@@ -259,7 +259,6 @@ button.github-link:active {
     border-radius: 20px;
     height: fit-content;
     width: 80%;
-    max-width: 1000px;
 }
 
 .project-container {
@@ -711,7 +710,7 @@ form.contact-form button.submit-form {
     text-decoration: none;
     transition: all 250ms;
     border: 0;
-    font-size: 16px;
+    font-size: 20px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
