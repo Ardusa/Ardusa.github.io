@@ -254,10 +254,12 @@ button.github-link:active {
     height: 100%;
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
-    margin: 20px 60px 40px 60px;
-    padding: 20px;
+    margin: 20px auto 40px auto;
+    padding: 20px 35px;
     border-radius: 20px;
     height: fit-content;
+    width: 80%;
+    max-width: 1000px;
 }
 
 .project-container {
@@ -340,10 +342,10 @@ button.github-link:active {
 }
 
 .links {
-    margin: 0px 10px;
+    margin: 0px 0px;
     display: flex;
     flex-wrap: nowrap;
-    gap: 40px;
+    gap: 15px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -356,18 +358,18 @@ button.github-link:active {
     cursor: pointer;
     display: inline-block;
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 3;
     outline: transparent;
     padding: 3px 5px;
     text-align: center;
     text-decoration: none;
-    transition: box-shadow .2s ease-in-out;
+    transition: box-shadow 0.2s ease-out;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    width: 90px;
+    width: 110px;
 }
 
 .links button.linkedin {
@@ -680,7 +682,7 @@ p {
 form.contact-form {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 80px;
     margin-top: 20px;
     width: 100%
 }
