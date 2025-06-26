@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 :root {
-    --header-font: 'Inter', sans-serif;
-    --body-font: 'Comic Sans MS', sans-serif;
-    --button-font: 'Montserrat', sans-serif;
+    --header-font: 'Inter', 'Comic Sans MS';
+    --body-font: 'Montserrat', 'Comic Sans MS';
+    --button-font: 'Montserrat', 'Comic Sans MS';
+    --card-header-font: 'Poppins', 'Comic Sans MS';
+    --card-body-font: 'Montserrat', 'Comic Sans MS';
 }
 
 html,
@@ -35,6 +39,8 @@ footer {
     color: white;
     text-align: center;
     padding: 24px 0px;
+    font-size: 20px;
+    font-family: var(--header-font);
 }
 
 #particles-js {
@@ -59,7 +65,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .title-container h1 {
@@ -205,7 +211,7 @@ button.github-link:active {
     text-align: center;
     background: rgba(255, 255, 255, 0.1);
     margin: 0px;
-    padding: 20px 35px;
+    padding: 40px 35px;
     border-radius: 20px;
     height: fit-content;
     width: 80%;
@@ -217,6 +223,8 @@ button.github-link:active {
     justify-content: center;
     position: relative;
     margin: 0px;
+    gap: 20px;
+    padding: 20px;
 }
 
 .project-card {
@@ -224,37 +232,16 @@ button.github-link:active {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
-    margin: 1rem;
     flex: 1 1 calc(33.333% - 2rem);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     text-align: left;
-    align-items: left;
     min-width: 600px;
     max-width: 650px;
+    gap: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
-
-.project-container .card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-container .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-card .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 
 .project-card:hover {
     transform: translateY(-4px);
@@ -263,121 +250,27 @@ button.github-link:active {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+.project-card .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
 }
 
 .project-card h2 {
     margin: 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--card-header-font);
     font-size: 38px;
 }
 
 .project-card p {
-    margin-bottom: 15px;
-    font-family: 'Roboto', sans-serif;
+    margin: 0%;
+    font-family: var(--card-body-font);
 }
 
 .project-card button {
-    margin-bottom: 0px;
-}
-
-.about-container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.about-container h2 {
-    font-family: var(--header-font);
-    font-size: 30px;
     margin: 0px;
 }
-
-.about-container p {
-    font-family: var(--body-font);
-    font-size: 20px;
-    margin: 0px;
-}
-
-.form-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.links {
-    margin: 0px 0px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 15px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.links button {
-    border: 0;
-    border-radius: 12px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    line-height: 3;
-    outline: transparent;
-    padding: 3px 5px;
-    text-align: center;
-    text-decoration: none;
-    transition: box-shadow 0.2s ease-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    width: 110px;
-}
-
-.links button.linkedin {
-    background: linear-gradient(to bottom right, #0077b5, #005582);
-}
-
-button.linkedin:not([disabled]):focus,
-button.linkedin:not([disabled]):hover {
-    box-shadow: 0 0 .25rem rgba(0, 119, 181, 0.5), -.125rem -.125rem 1rem rgba(0, 119, 181, 0.5), .125rem .125rem 1rem rgba(0, 119, 181, 0.5);
-}
-
-.links button.github {
-    background: linear-gradient(to bottom right, #000000, #434343);
-}
-
-button.github:not([disabled]):focus,
-button.github:not([disabled]):hover {
-    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 0, 0, 0.5), .125rem .125rem 1rem rgba(0, 0, 0, 0.5);
-}
-
-.links button.instagram {
-    background: linear-gradient(to bottom right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-button.instagram:not([disabled]):focus,
-button.instagram:not([disabled]):hover {
-    box-shadow: 0 0 .25rem rgba(188, 24, 136, 0.5), -.125rem -.125rem 1rem rgba(188, 24, 136, 0.5), .125rem .125rem 1rem rgba(188, 24, 136, 0.5);
-}
-
-.links button.resume {
-    background: #ff0000;
-}
-
-button.resume:not([disabled]):focus,
-button.resume:not([disabled]):hover {
-    box-shadow: 0 0 .25rem rgba(255, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(255, 0, 0, 0.5), .125rem .125rem 1rem rgba(255, 0, 0, 0.5);
-}
-
 
 .tags {
     margin: 0px;
@@ -391,6 +284,7 @@ button.resume:not([disabled]):hover {
     padding: 8px 15px;
     text-align: center;
     font-weight: bold;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     cursor: pointer;
     border-radius: 12px;
     box-sizing: border-box;
@@ -401,7 +295,7 @@ button.resume:not([disabled]):hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border:rgb(0, 0, 0) 2px solid;
+    border: rgb(0, 0, 0) 2px solid;
 }
 
 .tag-red {
@@ -634,18 +528,44 @@ button.resume:not([disabled]):hover {
     cursor: not-allowed;
 }
 
+.about-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-container h2 {
+    font-family: var(--header-font);
+    font-size: 30px;
+    margin: 0px;
+}
+
+.about-container p {
+    font-family: var(--body-font);
+    font-size: 20px;
+    margin: 0px;
+}
+
 .contact-form-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 40px 0px;
+    margin: 0px;
     width: 100%;
     align-items: center;
 }
 
-.contact-form-container h2,
+.contact-form-container h2 {
+    font-family: var(--card-header-font);
+    font-size: 30px;
+    margin: 0px;
+}
+
 .contact-form-container p {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--card-body-font);
     margin: 0px;
 }
 
@@ -665,6 +585,14 @@ form.contact-form .inputs {
     font-family: "Roboto", sans-serif;
     width: 100%;
     margin-left: auto;
+}
+
+form.contact-form .input-box {
+    border-radius: 20px;
+    padding: 15px;
+    width: auto;
+    border: solid;
+    font-family: var(--body-font);
 }
 
 form.contact-form button.submit-form {
@@ -694,14 +622,6 @@ form.contact-form button.submit-form:hover {
     transform: translateY(5px)
 }
 
-form.contact-form .input-box {
-    border-radius: 20px;
-    padding: 15px;
-    width: auto;
-    border: solid;
-    font-family: "Roboto", sans-serif;
-}
-
 form.contact-form .buttons {
     display: flex;
     flex-direction: column;
@@ -715,6 +635,81 @@ form.contact-form label {
     font-size: 20px;
     margin-top: 10px;
     margin-left: 10px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.links {
+    margin: 0px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.links button {
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 3;
+    outline: transparent;
+    padding: 3px 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s ease-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    width: 110px;
+}
+
+.links button.linkedin {
+    background: linear-gradient(to bottom right, #0077b5, #005582);
+}
+
+button.linkedin:not([disabled]):focus,
+button.linkedin:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 119, 181, 0.5), -.125rem -.125rem 1rem rgba(0, 119, 181, 0.5), .125rem .125rem 1rem rgba(0, 119, 181, 0.5);
+}
+
+.links button.github {
+    background: linear-gradient(to bottom right, #000000, #434343);
+}
+
+button.github:not([disabled]):focus,
+button.github:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 0, 0, 0.5), .125rem .125rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.links button.instagram {
+    background: linear-gradient(to bottom right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+button.instagram:not([disabled]):focus,
+button.instagram:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(188, 24, 136, 0.5), -.125rem -.125rem 1rem rgba(188, 24, 136, 0.5), .125rem .125rem 1rem rgba(188, 24, 136, 0.5);
+}
+
+.links button.resume {
+    background: #ff0000;
+}
+
+button.resume:not([disabled]):focus,
+button.resume:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(255, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(255, 0, 0, 0.5), .125rem .125rem 1rem rgba(255, 0, 0, 0.5);
 }
 
 @media (max-width: 600px) {
