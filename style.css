@@ -602,8 +602,26 @@ form.contact-form .input-box {
     border-radius: 20px;
     padding: 15px;
     width: auto;
-    border: solid;
     font-family: var(--body-font);
+    background-color: transparent;
+    border: gray 2px solid;
+    color: white;
+    transition: border 0.3s ease;
+}
+
+form.contact-form .input-box:focus {
+    outline: none;
+    border: 2px #85a9f9 solid;
+}
+
+form.contact-form .input-box::placeholder {
+    color: #fff !important;
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+form.contact-form .input-box:focus::placeholder {
+    opacity: 0.4;
 }
 
 form.contact-form button.submit-form {
@@ -639,6 +657,7 @@ form.contact-form .buttons {
     gap: 15px;
     align-items: center;
     margin: auto 0px;
+    width: 100%;
 }
 
 form.contact-form label {
@@ -655,18 +674,17 @@ form.contact-form label {
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.links {
-    margin: 0px 0px;
+.contact-form-container .links {
+    margin: 0px;
+    padding: 0px;
     display: flex;
     flex-wrap: nowrap;
-    gap: 15px;
-    width: 100%;
-    justify-content: center;
+    width: 95%;
+    justify-content: space-between;
     align-items: center;
 }
 
-.links button {
+.contact-form-container .links button {
     border: 0;
     border-radius: 12px;
     color: #FFFFFF;
@@ -687,7 +705,7 @@ form.contact-form label {
     width: 110px;
 }
 
-.links button.linkedin {
+.contact-form-container .links button.linkedin {
     background: linear-gradient(to bottom right, #0077b5, #005582);
 }
 
@@ -696,7 +714,7 @@ button.linkedin:not([disabled]):hover {
     box-shadow: 0 0 .25rem rgba(0, 119, 181, 0.5), -.125rem -.125rem 1rem rgba(0, 119, 181, 0.5), .125rem .125rem 1rem rgba(0, 119, 181, 0.5);
 }
 
-.links button.github {
+.contact-form-container .links button.github {
     background: linear-gradient(to bottom right, #000000, #434343);
 }
 
@@ -705,7 +723,7 @@ button.github:not([disabled]):hover {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(0, 0, 0, 0.5), .125rem .125rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-.links button.instagram {
+.contact-form-container .links button.instagram {
     background: linear-gradient(to bottom right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
@@ -714,7 +732,7 @@ button.instagram:not([disabled]):hover {
     box-shadow: 0 0 .25rem rgba(188, 24, 136, 0.5), -.125rem -.125rem 1rem rgba(188, 24, 136, 0.5), .125rem .125rem 1rem rgba(188, 24, 136, 0.5);
 }
 
-.links button.resume {
+.contact-form-container .links button.resume {
     background: #ff0000;
 }
 
