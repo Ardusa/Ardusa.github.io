@@ -615,7 +615,7 @@ form.contact-form .input-box:focus {
 }
 
 form.contact-form .input-box::placeholder {
-    color: #fff !important;
+    color: #fff;
     opacity: 1;
     transition: all 0.2s ease;
 }
