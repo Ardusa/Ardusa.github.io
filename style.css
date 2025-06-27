@@ -604,14 +604,14 @@ form.contact-form .input-box {
     width: auto;
     font-family: var(--body-font);
     background-color: transparent;
-    border: gray 2px solid;
+    border: gray 3px solid;
     color: white;
     transition: border 0.3s ease;
 }
 
 form.contact-form .input-box:focus {
     outline: none;
-    border: 2px #85a9f9 solid;
+    border: 3px #85a9f9 solid;
 }
 
 form.contact-form .input-box::placeholder {
