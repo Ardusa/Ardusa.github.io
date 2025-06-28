@@ -11,10 +11,12 @@
     --card-body-font: 'Montserrat', 'Comic Sans MS';
 }
 
-html,
-body {
+html, html body {
     height: 100%;
     width: 100%;
+}
+
+body {
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -529,13 +531,13 @@ button.github-link:active {
 }
 
 .about-container {
-    padding: 20px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    width: 80%
+    width: 80%;
 }
 
 .about-container h2 {
@@ -742,35 +744,39 @@ button.resume:not([disabled]):hover {
 }
 
 @media (max-width: 600px) {
-    .floating-centered-container {
-        padding: 2rem 5rem;
-        width: 90%;
-    }
-
-    .floating-centered-container h1 {
-        font-size: 30px;
-    }
-
-    .floating-centered-container p {
-        margin: 10px 0px;
-    }
-
     .title-container {
-        padding: 2rem 5rem;
+        padding: 2rem 25px;
+        width: 80%;
     }
 
     .title-container h1 {
         font-size: 30px;
     }
-
+    
     .title-container p {
-        margin: 5px 0px;
+        font-size: 15px;
+    }
+
+    .title-container .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 30px 20px;
+        width: 95%;
+    }
+
+    .container h2 {
+        font-size: 25px;
+    }
+
+    .container p {
+        font-size: 13px;
     }
 
     .project-card {
-        min-width: 100%;
-        max-width: 100%;
-        padding: 1rem;
+        width: 80%;
     }
 
     .project-card h2 {
@@ -807,5 +813,10 @@ button.resume:not([disabled]):hover {
     form.contact-form button.submit-form {
         padding: 15px 20px;
         font-size: 14px;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 15px 0px;
     }
 }
