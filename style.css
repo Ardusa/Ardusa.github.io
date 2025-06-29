@@ -12,7 +12,7 @@
 }
 
 html, html body {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
 }
 
@@ -21,6 +21,7 @@ body {
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    height: fit-content;
 }
 
 body {
@@ -306,7 +307,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-red:not(:disabled):hover,
@@ -329,7 +329,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-green:not(:disabled):hover,
@@ -352,7 +351,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-purple:not(:disabled):hover,
@@ -375,7 +373,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-blue:not(:disabled):hover,
@@ -398,7 +395,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-pink:not(:disabled):hover,
@@ -421,7 +417,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-yellow:not(:disabled):hover,
@@ -444,7 +439,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-orange:not(:disabled):hover,
@@ -467,7 +461,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-cyan:not(:disabled):hover,
@@ -490,7 +483,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-brown:not(:disabled):hover,
@@ -513,7 +505,6 @@ button.github-link:active {
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
-    margin-right: 20px;
 }
 
 .tag-dark-green:not(:disabled):hover,
@@ -745,8 +736,8 @@ button.resume:not([disabled]):hover {
 
 @media (max-width: 600px) {
     .title-container {
-        padding: 2rem 25px;
-        width: 80%;
+        padding: 2rem 30px;
+        width: 70%;
     }
 
     .title-container h1 {
@@ -764,7 +755,7 @@ button.resume:not([disabled]):hover {
 
     .container {
         padding: 30px 20px;
-        width: 95%;
+        width: 100%;
     }
 
     .container h2 {
@@ -775,26 +766,38 @@ button.resume:not([disabled]):hover {
         font-size: 13px;
     }
 
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+
     .project-card {
-        width: 80%;
+        min-width: 0px;
+        width: 100%;
     }
 
     .project-card h2 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .project-card p {
         font-size: 14px;
     }
 
-    button {
-        padding: 10px 20px;
-        font-size: 14px;
+    .project-card button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .tags {
+        justify-content: space-between;
     }
 
     .tags span {
         padding: 5px 10px;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .contact-form-container {
@@ -813,6 +816,20 @@ button.resume:not([disabled]):hover {
     form.contact-form button.submit-form {
         padding: 15px 20px;
         font-size: 14px;
+        width: 100%;
+    }
+
+    form.contact-form .links {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+    }
+
+    form.contact-form button.instagram,
+    form.contact-form button.github,
+    form.contact-form button.linkedin {
+        padding: 2px 2px;
+        font-size: 12px;
     }
 
     footer {

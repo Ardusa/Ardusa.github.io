@@ -127,8 +127,6 @@
                         const selectedTags = tags.filter(tag => ['Python', 'AI', 'WebSockets', 'SQL'].includes(tag.name));
                         const container = document.getElementById('tags-container-4');
                         selectedTags.forEach(tag => {
-                            console.log(tag);
-                            console.log(container);
                             const tagElement = createTag(tag);
                             container.appendChild(tagElement);
                         });
