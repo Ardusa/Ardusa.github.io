@@ -755,7 +755,7 @@ button.resume:not([disabled]):hover {
 
     .container {
         padding: 30px 20px;
-        width: 100%;
+        width: 95%;
     }
 
     .container h2 {
@@ -828,7 +828,7 @@ button.resume:not([disabled]):hover {
     form.contact-form button.instagram,
     form.contact-form button.github,
     form.contact-form button.linkedin {
-        padding: 2px 2px;
+        padding: 2px 0px;
         font-size: 12px;
     }
 
