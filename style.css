@@ -301,8 +301,8 @@ button.github-link:active {
 }
 
 .tag-red {
-    background-color: rgba(115, 24, 24, 0.298);
-    color: #ff4242;
+    background-color: rgba(126, 15, 15, 0.298);
+    color: #ff7979;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
@@ -347,8 +347,8 @@ button.github-link:active {
 }
 
 .tag-purple {
-    background-color: rgba(255, 108, 255, 0.213);
-    color: #ff00ff;
+    background-color: rgba(255, 37, 255, 0.31);
+    color: #ffb3ff;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
@@ -370,8 +370,8 @@ button.github-link:active {
 }
 
 .tag-blue {
-    background-color: rgba(66, 66, 192, 0.164);
-    color: #5050ff;
+    background-color: rgba(72, 72, 238, 0.274);
+    color: #b197ff;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
@@ -393,8 +393,8 @@ button.github-link:active {
 }
 
 .tag-pink {
-    background-color: rgba(255, 192, 203, 0.27);
-    color: #ff51ab;
+    background-color: rgba(255, 130, 151, 0.234);
+    color: #ff99b9;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
@@ -440,7 +440,7 @@ button.github-link:active {
 
 .tag-orange {
     background-color: rgba(253, 193, 82, 0.267);
-    color: #ff9900;
+    color: #ffba52;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
@@ -485,8 +485,8 @@ button.github-link:active {
 }
 
 .tag-brown {
-    background-color: rgba(112, 71, 71, 0.24);
-    color: #b35959;
+    background-color: rgba(112, 71, 71, 0.487);
+    color: #d9adad;
     transition: 200ms;
     font-size: 16px;
     border: 2px solid #000;
