@@ -11,7 +11,8 @@
     --card-body-font: 'Montserrat', 'Comic Sans MS';
 }
 
-html, html body {
+html,
+html body {
     /* height: 100%; */
     width: 100%;
 }
@@ -667,6 +668,7 @@ form.contact-form label {
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .contact-form-container .links {
     margin: 0px;
     padding: 0px;
@@ -744,7 +746,7 @@ button.resume:not([disabled]):hover {
     .title-container h1 {
         font-size: 30px;
     }
-    
+
     .title-container p {
         font-size: 15px;
     }
