@@ -1,7 +1,7 @@
 particlesJS('particles-js', {
   particles: {
     number: {
-      value: 100,
+      value: 200,
       density: {
         enable: true,
         value_area: 800
@@ -54,7 +54,7 @@ particlesJS('particles-js', {
     },
     move: {
       enable: true,
-      speed: 2, // Reduced speed to make particle movement smoother and less distracting for users
+      speed: 2,
       direction: 'none',
       random: false,
       straight: false,
@@ -71,13 +71,13 @@ particlesJS('particles-js', {
     detect_on: 'window',
     events: {
       onhover: {
-        enable: false,
+        enable: true,
+        mode: ['grab']
       },
-
       onclick: {
         enable: false,
+        mode: ['repulse']
       },
-      
       resize: true
     },
     modes: {
@@ -103,8 +103,29 @@ particlesJS('particles-js', {
       },
       remove: {
         particles_nb: 2
+      },
+      add: {
+        particles_nb: 5
       }
     }
   },
   retina_detect: true
+});
+
+const particlesContainer = window.pJSDom[0].pJS;
+let targetDivs = document.getElementsByClassName('title-container');
+targetDivs = [...targetDivs, document.querySelector('footer')];
+
+console.log(targetDivs);
+
+targetDivs.forEach(div => {
+  div.addEventListener('mouseenter', () => {
+    particlesContainer.interactivity.events.onhover.enable = false;
+  });
+});
+
+targetDivs.forEach(div => {
+  div.addEventListener('mouseleave', () => {
+    particlesContainer.interactivity.events.onhover.enable = true;
+  });
 });
