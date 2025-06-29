@@ -738,6 +738,7 @@ button.resume:not([disabled]):hover {
     .title-container {
         padding: 2rem 30px;
         width: 70%;
+        background: rgba(37, 37, 37, 0.35);
     }
 
     .title-container h1 {
