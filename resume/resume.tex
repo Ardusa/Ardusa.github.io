@@ -1,126 +1,79 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 3.0 (December 17, 2022)
-%
-% This template originates from:
-% https://www.LaTeXTemplates.com
-%
-% Author:
-% Vel (vel@latextemplates.com)
-%
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% License:
-% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[
-	% a4paper, % Uncomment for A4 paper size (default is US letter)
-	11pt, % Default font size, can use 10pt, 11pt or 12pt
-]{resume} % Use the resume class
+	11pt
+]{resume}
 
-\usepackage{ebgaramond} % Use the EB Garamond font
+% \usepackage{ebgaramond} % Use the EB Garamond font
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
 
 %------------------------------------------------
 
-\name{Ankur Desai} % Your name to appear at the top
+\name{Ankur Desai}
 
-% You can use the \address command up to 3 times for 3 different addresses or pieces of contact information
-% Any new lines (\\) you use in the \address commands will be converted to symbols, so each address will appear as a single line.
-
-\address{49032 Freestone Dr. \\ Northville, MI 48168} % Main address
-
-% \address{123 Pleasant Lane \\ City, State 12345} % A secondary address (optional)
-
-\address{(248)~$\cdot$~657~$\cdot$~3805 \\ ardusa05@gmail.com} % Contact information
-
-%----------------------------------------------------------------------------------------
+% \address{591 N. Shaw Ln. \\ East Shaw Hall Room 131 \\ East Lansing, MI 48825}
+\address{49032 Freestone Dr. \\ Northville, MI 48168}
+\address{(248) $\cdot$ 657 $\cdot$ 3805 \\ ardusa05@gmail.com}
 
 \begin{document}
+	\begin{rSection}{Education}
+		\begin{rSectionEntry}{Michigan State University}{May 2028}{B.S. in Computer Science \& Engineering}{East Lansing, MI}
+			\item Overall GPA: 3.735
+			\item Relevant Coursework: Intro to Programming, Discrete Math, Calculus 3
+			\item Involvement: MSU AI, Imagine Software Club, Unmanned Systems
+		\end{rSectionEntry}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+		\begin{rSectionEntry}{Northville High School}{June 2024}{High School Diploma}{Northville, MI}
+			\item Involvement: Robostangs Software Captain, Robostangs Electrical \& Pneumatics Captain
+		\end{rSectionEntry}
 
-\begin{rSection}{Education}
+	\end{rSection}
 
-	\textbf{University of California, Berkeley} \hfill \textit{June 2004} \\
-	B.S. in Computer Science \& Engineering \\
-	Minor in Linguistics \smallskip \\
-	Member of Eta Kappa Nu \\
-	Member of Upsilon Pi Epsilon \\
-	Overall GPA: 5.678
+	\begin{rSection}{Experience}
 
-\end{rSection}
+		\begin{rSectionEntry}{WFS Consulting Group}{May 2025 - Present}{Web Developer}{Plymouth, MI}
+			\item Designed and deployed static website.
+			\item Worked with clients to gather requirements and provide solutions.
+			\item Implemented responsive design principles to ensure compatibility across devices.
+		\end{rSectionEntry}
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
+		\begin{rSectionEntry}{Target}{June 2024 - Aug 2024}{Customer Service Advocate}{Northville, MI}
+			\item Assisted customers with inquiries and issues related to products and services.
+			\item Collaborated with team members to improve customer satisfaction and streamline processes.
+		\end{rSectionEntry}
 
-\begin{rSection}{Experience}
+	\end{rSection}
 
-	\begin{rSubsection}{ACME, Inc}{October 2010 - Present}{Web Developer}{Palo Alto, CA}
-		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
-		\item Donec et mollis dolor. Praesent et diam eget libero Adobe Coldfusion egestas mattis sit amet vitae augue.
-		\item Nam tincidunt congue enim, ut porta lorem Microsoft SQL lacinia consectetur.
-		\item Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-		\item Pellentesque auctor nisi id magna consequat JavaScript sagittis.
-		\item Aliquam at massa ipsum. Quisque bash bibendum purus convallis nulla ultrices ultricies.
-	\end{rSubsection}
+	\begin{rSection}{Projects}
 
-%------------------------------------------------
+		\begin{rSectionEntry}{WizViz}{February 2025}{Hackathon Project}{}
+			\item Collaborated with a team to develop a PyGame based OpenCV game.
+			\item Won best game at SpartaHack X
+		\end{rSectionEntry}
 
-	\begin{rSubsection}{AJAX Hosting}{December 2009 - October 2010}{Lead Developer}{Austin, TX}
-		\item Aenean ut gravida lorem. Ut turpis felis, Perl pulvinar a semper sed, adipiscing id dolor.
-		\item Curabitur dapibus enim sit amet elit pharetra tincidunt website feugiat nisl imperdiet. Ut convallis AJAX libero in urna ultrices accumsan.
-		\item Cum sociis natoque penatibus et magnis dis MySQL parturient montes, nascetur ridiculus mus.
-		\item In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
-		\item Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper.
-	\end{rSubsection}
+		\begin{rSectionEntry}{Mira Personal Assistant}{May 2025 - Present}{Full Stack Development}{}
+			\item Utilized Node.js and Electron to develop a cross-platform, reactive, desktop application.
+			\item Utilized FastAPI, SQLAlchemy to build a RESTful API for the application.
+			\item Integrated Hugging Face Transformers for natural language processing tasks.
+			\item Implemented Voice Embeddings, Text Embeddings and DBScan for user tracking.
+		\end{rSectionEntry}
 
-%------------------------------------------------
+		\begin{rSectionEntry}{Personal Website}{February 2025 - Present}{Web Development}{}
+			\item Developed a personal portfolio website to showcase projects and skills.
+			\item Utilized HTML, CSS, and JavaScript to create a responsive design.
+			\item Continuing to enhance the website with new projects and features.
+		\end{rSectionEntry}
 
-	\begin{rSubsection}{TinySoft}{January 2008 - April 2010}{Web Designer \& Developer}{Gainesville, GA}
-		\item Vivamus PostgreSQL fermentum semper porta. Nunc diam velit PHP, adipiscing ut tristique vitae
-		\item Maecenas convallis ullamcorper ultricies stylesheets.
-		\item Quisque mi metus, unit tests CSS ornare sit amet fermentum et, tincidunt et orci.
-		\item Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id
-	\end{rSubsection}
+	\end{rSection}
 
-\end{rSection}
+	\begin{rSection}{Technical Skills}
 
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
+		\begin{tabular}{@{} >{\bfseries}l @{\hskip 6ex} l @{}}
+			Computer Languages & Java, JavaScript, Python, HTML, CSS, Swift \\
+			Frameworks & React, Node.js, FastAPI \\
+			Protocols \& APIs & JSON, REST, WebHooks \\
+			Databases & MySQL, SQLAlchemy \\
+		\end{tabular}
 
-\begin{rSection}{Technical Strengths}
-
-	\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l @{}}
-		Computer Languages & Prolog, Haskell, AWK, Erlang, Scheme, ML \\
-		Protocols \& APIs & XML, JSON, SOAP, REST \\
-		Databases & MySQL, PostgreSQL, Microsoft SQL \\
-		Tools & SVN, Vim, Emacs
-	\end{tabular}
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-%\begin{rSection}{Section Name}
-
-	%Section content\ldots
-
-%\end{rSection}
-
-%----------------------------------------------------------------------------------------
+	\end{rSection}
 
 \end{document}
