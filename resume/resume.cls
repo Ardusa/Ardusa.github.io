@@ -1,25 +1,21 @@
 \ProvidesClass{resume}[2025/08/29 v3.0 Resume class]
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % Pass through any options to the base class
-\ProcessOptions\relax % Process given options
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\ProcessOptions\relax
 
-\LoadClass{article} % Load the base class
+\LoadClass{article}
 
-%----------------------------------------------------------------------------------------
-%	REQUIRED PACKAGES AND MISC CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\usepackage[parfill]{parskip}
 
-\usepackage[parfill]{parskip} % Remove paragraph indentation
+\usepackage{array}
 
-\usepackage{array} % Required for bold tabular columns
+\usepackage{ifthen}
 
-\usepackage{ifthen} % Required for ifthenelse statements
-
-\usepackage{graphicx} % Required for including images
+\usepackage{graphicx}
 
 \usepackage{amsmath}
 
-\pagestyle{empty} % Suppress headers and footers on all pages
+\pagestyle{empty}
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
@@ -28,7 +24,7 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	top=0.6in, % Top margin
+	top=0.5in, % Top margin
 	bottom=0.4in, % Bottom margin
 	left=0.5in, % Left margin (reduced)
 	right=0.5in, % Right margin (reduced)
@@ -57,12 +53,12 @@
 
 % \printaddress is used to style an address line (provided in the single parameter to the command)
 \newcommand{\printaddress}[1]{
-	\vspace{-0.5em}
+	\vspace{-1em}
 	\begin{center}
 		\def \\ {$\hspace{0.5em}\diamond\hspace{0.5em}$}
 		#1
 	\end{center}
-	\vspace{0.5em}
+	\vspace{0em}
 }
 
 % \printname is used to output the user's name in a large size
@@ -93,18 +89,18 @@
 	\end{list}
 }
 
-\newenvironment{rSectionEntry}[4]{ % 4 parameters: name of institution/employer, year(s) employed/graduation date, job title/degree, and location
+\newenvironment{rSectionEntry}[4]{ % 4 parameters: name of name of thing, dates, tagline, and location
 	\textbf{#1} \hfill {#2}
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
 		\\
 		\textit{#3} \hfill \textit{#4}
 	}
 	\smallskip
-	\begin{list}{$\bullet$}{\leftmargin=1.0909090909090908em}
-		\setlength{\itemsep}{-0.45454545454545453em} \vspace{-0.8181818181818182em}
+	\begin{list}{$\bullet$\hspace{0.5em}}{\leftmargin=1.7em}
+		\setlength{\itemsep}{-0.7em} \vspace{-0.8em}
 }{
 	\end{list}
-	\vspace{0.18181818181818182em}
+	\vspace{-0.2em}
 }
 
 \newenvironment{rSet}[2] % 2 Parameters: Set title, set items
