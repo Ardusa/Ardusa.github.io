@@ -56,29 +56,20 @@
 }
 
 % \printaddress is used to style an address line (provided in the single parameter to the command)
-\newcommand{\printaddress}[3]{
-	\vspace{-1.5em}
+\newcommand{\printaddress}[1]{
+	\vspace{-0.5em}
 	\begin{center}
-		\begin{tabular}{c}
-			#1
-		\end{tabular}
-		\hspace{5em}
-		\begin{tabular}{c}
-			#2
-		\end{tabular}
-		\hspace{5em}
-		\begin{tabular}{c}
-			#3
-		\end{tabular}
+		\def \\ {$\hspace{0.5em}\diamond\hspace{0.5em}$}
+		#1
 	\end{center}
-	\vspace{0.25em}
+	\vspace{0.5em}
 }
 
 % \printname is used to output the user's name in a large size
 \newcommand{\printname}{
 	\begingroup
 		\hfil{\MakeUppercase{\huge\bfseries\name}}\hfil
-		\bigskip\break
+		\break
 	\endgroup
 }
 
@@ -86,7 +77,7 @@
 \renewcommand{\document}{
 	\ori@document  % Output the original \document command but add to it below
 	\printname
-	\printaddress{\@addressone}{\@addresstwo}{\@addressthree}
+	\printaddress{\@addressone}
 }
 
 % Defines the rSection environment for the major sections within the CV
