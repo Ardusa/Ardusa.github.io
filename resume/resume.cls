@@ -29,7 +29,7 @@
 
 \geometry{
 	top=0.6in, % Top margin
-	bottom=0.6in, % Bottom margin
+	bottom=0.4in, % Bottom margin
 	left=0.5in, % Left margin (reduced)
 	right=0.5in, % Right margin (reduced)
 	% showframe, % Uncomment to show how the type block is set on the page
@@ -57,26 +57,20 @@
 
 % \printaddress is used to style an address line (provided in the single parameter to the command)
 \newcommand{\printaddress}[3]{
-	\begingroup
-		\def \\ {\hspace{0.2em} $ \circ  $ \hspace{0.5em}} % Redefine newlines (\\) to the address separator symbol so multiple lines of each address are output as a single line
-		% Center and horizontally stack the address lines
-		\vspace{-0.5em}
-		\begin{center}
-			\begin{tabular}{c}
-				#1
-			\end{tabular}
-			\hspace{1em}
-			\begin{tabular}{c}
-				#2
-			\end{tabular}
-			\hspace{1em}
-			\begin{tabular}{c}
-				#3
-			\end{tabular}
-		\end{center}
-	\endgroup
-	\par
-	\smallskip
+	\vspace{-1.25em}
+	\begin{center}
+		\begin{tabular}{c}
+			#1
+		\end{tabular}
+		\hspace{8em}
+		\begin{tabular}{c}
+			#2
+		\end{tabular}
+		\begin{tabular}{c}
+			#3
+		\end{tabular}
+	\end{center}
+	\vspace{0.5em}
 }
 
 % \printname is used to output the user's name in a large size
@@ -91,10 +85,7 @@
 \renewcommand{\document}{
 	\ori@document  % Output the original \document command but add to it below
 	\printname
-	\printaddress{\@addressone}{\@addresstwo}{\@addressthree} % Output the address lines that have been set
-	% \@ifundefined{@addressone}{}{\printaddress{\@addressone}}
-	% \@ifundefined{@addresstwo}{}{\printaddress{\@addresstwo}}
-	% \@ifundefined{@addressthree}{}{\printaddress{\@addressthree}}
+	\printaddress{\@addressone}{\@addresstwo}{\@addressthree}
 }
 
 % Defines the rSection environment for the major sections within the CV
