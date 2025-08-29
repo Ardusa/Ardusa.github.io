@@ -57,20 +57,21 @@
 
 % \printaddress is used to style an address line (provided in the single parameter to the command)
 \newcommand{\printaddress}[3]{
-	\vspace{-1.25em}
+	\vspace{-1.5em}
 	\begin{center}
 		\begin{tabular}{c}
 			#1
 		\end{tabular}
-		\hspace{8em}
+		\hspace{5em}
 		\begin{tabular}{c}
 			#2
 		\end{tabular}
+		\hspace{5em}
 		\begin{tabular}{c}
 			#3
 		\end{tabular}
 	\end{center}
-	\vspace{0.5em}
+	\vspace{0.25em}
 }
 
 % \printname is used to output the user's name in a large size
@@ -114,3 +115,11 @@
 	\end{list}
 	\vspace{0.18181818181818182em}
 }
+
+\newenvironment{rSet}[2] % 2 Parameters: Set title, set items
+{
+	\noindent
+	\begin{minipage}{\textwidth}
+		\textbf{#1} \dotfill {#2}
+	\end{minipage}
+}{}
