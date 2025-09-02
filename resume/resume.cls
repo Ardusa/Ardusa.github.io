@@ -24,8 +24,8 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	top=0.5in, % Top margin
-	bottom=0.4in, % Bottom margin
+	top=0.75in, % Top margin
+	bottom=0.75in, % Bottom margin
 	left=0.5in, % Left margin (reduced)
 	right=0.5in, % Right margin (reduced)
 	% showframe, % Uncomment to show how the type block is set on the page
@@ -78,7 +78,7 @@
 
 % Defines the rSection environment for the major sections within the CV
 \newenvironment{rSection}[1]{ % 1 Parameter: Section Title
-	\MakeUppercase{\textbf{#1}}
+	\MakeUppercase{\textbf{\fontsize{12pt}{14pt}\selectfont #1}}
 	\medskip
 	\hrule
 	\begin{list}{}{
@@ -90,17 +90,17 @@
 }
 
 \newenvironment{rSectionEntry}[4]{ % 4 parameters: name of name of thing, dates, tagline, and location
-	\textbf{#1} \hfill {#2}
+	\textbf{\fontsize{11pt}{13pt}\selectfont #1} \hfill {#2}
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
 		\\
 		\textit{#3} \hfill \textit{#4}
 	}
-	\smallskip
-	\begin{list}{$\bullet$\hspace{0.5em}}{\leftmargin=1.7em}
-		\setlength{\itemsep}{-0.7em} \vspace{-0.8em}
+	\vspace{0em}
+	\begin{list}{$\bullet\hspace{1em}$}{\leftmargin=2.5em}
+		\setlength{\itemsep}{-0.7em} \vspace{-0.7em}
 }{
 	\end{list}
-	\vspace{-0.2em}
+	\vspace{0.5em}
 }
 
 \newenvironment{rSet}[2] % 2 Parameters: Set title, set items
