@@ -24,8 +24,8 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	top=0.75in, % Top margin
-	bottom=0.75in, % Bottom margin
+	top=1in, % Top margin
+	bottom=1in, % Bottom margin
 	left=0.5in, % Left margin (reduced)
 	right=0.5in, % Right margin (reduced)
 	% showframe, % Uncomment to show how the type block is set on the page
@@ -40,7 +40,7 @@
 	\vspace{0em}
 	\begingroup
 		\begin{center}
-			{\MakeUppercase{\huge\bfseries\@name}}
+			{{\fontsize{35pt}{37pt}\selectfont\@name}}
 		\end{center}
 	\endgroup
 	\vspace{0em}
@@ -51,7 +51,7 @@
 	\vspace{0em}
 	\begin{center}
 		\def \\ {$\hspace{0.5em}\diamond\hspace{0.5em}$}
-		\@address
+		{{\fontsize{12pt}{14pt}\selectfont\@address}}
 	\end{center}
 	\vspace{0em}
 }
@@ -61,17 +61,18 @@
 \renewcommand{\document}{%
 	\ori@document
 	\printname
-	\vspace{0em}
+	\vspace{0.3em}
 	\printaddress
+	\vspace{0.6em}
 }
 
 % Defines the rSection environment for the major sections within the CV
 \newenvironment{rSection}[2]{ % 2 Parameters: First letter, Section Title
-	\MakeUppercase{\textbf{\fontsize{15pt}{17pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{\textbf{\fontsize{11pt}{13pt}\selectfont #2}}
+	\MakeUppercase{{\fontsize{16pt}{18pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{{\fontsize{12pt}{14pt}\selectfont #2}}
 	\medskip
 	\hrule
 	\begin{list}{}{
-		\setlength{\leftmargin}{0.5em}
+		\setlength{\leftmargin}{1em}
 	}
 	\item[]
 }{
@@ -79,14 +80,14 @@
 }
 
 \newenvironment{rSectionEntry}[4]{ % 4 parameters: name of name of thing, dates, tagline, and location
-	\textbf{\fontsize{11pt}{13pt}\selectfont #1} \hfill {#2}
+	\textbf{\fontsize{12pt}{14pt}\selectfont #1} \hfill {#2}
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
 		\\
 		\textit{#3} \hfill \textit{#4}
 	}
 	\vspace{0em}
 	\begin{list}{$\hspace{1em}\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
-		\setlength{\itemsep}{-0.7em} \vspace{-0.7em}
+		\setlength{\itemsep}{-0.6em} \vspace{-0.6em}
 }{
 	\end{list}
 	\vspace{0.5em}
