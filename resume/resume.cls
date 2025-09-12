@@ -83,7 +83,7 @@
 	\textbf{\fontsize{12pt}{14pt}\selectfont #1} \hfill {#2}
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
 		\\
-		\textit{#3} \hfill \textit{#4}
+		{\fontsize{11pt}{13pt}\selectfont\textit{#3}} \hfill {\fontsize{11pt}{13pt}\selectfont\textit{#4}}
 	}
 	\vspace{0em}
 	\begin{list}{$\hspace{1em}\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
@@ -97,6 +97,6 @@
 {
 	\noindent
 	\begin{minipage}{\textwidth}
-		\textbf{#1} \dotfill {#2}
+		{\fontsize{12pt}{14pt}\selectfont \textbf{#1}} \dotfill {\fontsize{12pt}{14pt}\selectfont #2}
 	\end{minipage}
 }{}
