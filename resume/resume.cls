@@ -24,8 +24,8 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	top=1in, % Top margin
-	bottom=1in, % Bottom margin
+	top=0.55in, % Top margin
+	bottom=0.55in, % Bottom margin
 	left=0.5in, % Left margin (reduced)
 	right=0.5in, % Right margin (reduced)
 	% showframe, % Uncomment to show how the type block is set on the page
@@ -85,18 +85,18 @@
 		\\
 		{\fontsize{11pt}{13pt}\selectfont\textit{#3}} \hfill {\fontsize{11pt}{13pt}\selectfont\textit{#4}}
 	}
-	\vspace{0em}
+	\vspace{0.2em}
 	\begin{list}{$\hspace{1em}\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
 		\setlength{\itemsep}{-0.6em} \vspace{-0.6em}
 }{
 	\end{list}
-	\vspace{0.5em}
+	\vspace{0.2em}
 }
 
 \newenvironment{rSet}[2] % 2 Parameters: Set title, set items
 {
 	\noindent
-	\begin{minipage}{\textwidth}
-		{\fontsize{12pt}{14pt}\selectfont \textbf{#1}} \dotfill {\fontsize{12pt}{14pt}\selectfont #2}
+	\begin{minipage}{\dimexpr\textwidth-1em\relax} % Subtract 1em from the width to compensate
+		{\hspace{-1em}\fontsize{11pt}{13pt}\selectfont \textbf{#1}} \dotfill {\fontsize{11pt}{13pt}\selectfont #2}\vspace{0.3em}
 	\end{minipage}
 }{}
