@@ -1,4 +1,4 @@
-\ProvidesClass{resume}[2025/08/29 v3.0 Resume class]
+\ProvidesClass{resume}[09/11/2025 v3.0 Ankur's Resume Class]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -31,58 +31,47 @@
 	% showframe, % Uncomment to show how the type block is set on the page
 }
 
-\newcommand{\name}[1]{\renewcommand{\name}{#1}} % Defines the \name command to set the user's name
+% Define \name and \address to store values in macros
+\newcommand{\name}[1]{\def\@name{#1}}
+\newcommand{\address}[1]{\def\@address{#1}}
 
-% One, two or three address lines can be specified
-\let \@addressone \relax
-\let \@addresstwo \relax
-\let \@addressthree \relax
-
-% The \address command is used to set the first, second and third address lines (the last 2 are optional)
-\newcommand{\address}[1]{
-	\@ifundefined{@addressone}{ % If the first address line has not been set yet, set it
-		\def \@addressone {#1}
-	}{
-		\@ifundefined{@addresstwo}{ % If the second address line has not been set yet, set it
-			\def \@addresstwo {#1}
-		}{ % Otherwise, set the third address line
-			\def \@addressthree {#1}
-		}%
-	}
+% Print the name in a large, bold, uppercase style
+\newcommand{\printname}{
+	\vspace{0em}
+	\begingroup
+		\begin{center}
+			{\MakeUppercase{\huge\bfseries\@name}}
+		\end{center}
+	\endgroup
+	\vspace{0em}
 }
 
-% \printaddress is used to style an address line (provided in the single parameter to the command)
-\newcommand{\printaddress}[1]{
-	\vspace{-1em}
+% Print the address, allowing for line breaks with \\ and diamond separators
+\newcommand{\printaddress}{
+	\vspace{0em}
 	\begin{center}
 		\def \\ {$\hspace{0.5em}\diamond\hspace{0.5em}$}
-		#1
+		\@address
 	\end{center}
 	\vspace{0em}
 }
 
-% \printname is used to output the user's name in a large size
-\newcommand{\printname}{
-	\begingroup
-		\hfil{\MakeUppercase{\huge\bfseries\name}}\hfil
-		\break
-	\endgroup
-}
-
+% Print name and address at the top of the document automatically
 \let\ori@document=\document % Store the original \document command
-\renewcommand{\document}{
-	\ori@document  % Output the original \document command but add to it below
+\renewcommand{\document}{%
+	\ori@document
 	\printname
-	\printaddress{\@addressone}
+	\vspace{0em}
+	\printaddress
 }
 
 % Defines the rSection environment for the major sections within the CV
-\newenvironment{rSection}[1]{ % 1 Parameter: Section Title
-	\MakeUppercase{\textbf{\fontsize{12pt}{14pt}\selectfont #1}}
+\newenvironment{rSection}[2]{ % 2 Parameters: First letter, Section Title
+	\MakeUppercase{\textbf{\fontsize{15pt}{17pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{\textbf{\fontsize{11pt}{13pt}\selectfont #2}}
 	\medskip
 	\hrule
 	\begin{list}{}{
-		\setlength{\leftmargin}{0em}
+		\setlength{\leftmargin}{0.5em}
 	}
 	\item[]
 }{
@@ -96,7 +85,7 @@
 		\textit{#3} \hfill \textit{#4}
 	}
 	\vspace{0em}
-	\begin{list}{$\bullet\hspace{1em}$}{\leftmargin=2.5em}
+	\begin{list}{$\hspace{1em}\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
 		\setlength{\itemsep}{-0.7em} \vspace{-0.7em}
 }{
 	\end{list}
