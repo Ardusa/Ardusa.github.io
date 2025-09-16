@@ -37,13 +37,13 @@
 
 % Print the name in a large, bold, uppercase style
 \newcommand{\printname}{
-	\vspace{0em}
+	\vspace{-0.2em}
 	\begingroup
 		\begin{center}
 			{{\fontsize{35pt}{37pt}\selectfont\@name}}
 		\end{center}
 	\endgroup
-	\vspace{0em}
+	\vspace{-0.2em}
 }
 
 % Print the address, allowing for line breaks with \\ and diamond separators
@@ -61,9 +61,9 @@
 \renewcommand{\document}{%
 	\ori@document
 	\printname
-	\vspace{0.3em}
+	\vspace{0em}
 	\printaddress
-	\vspace{0.6em}
+	\vspace{0em}
 }
 
 % Defines the rSection environment for the major sections within the CV
@@ -85,18 +85,17 @@
 		\\
 		{\fontsize{11pt}{13pt}\selectfont\textit{#3}} \hfill {\fontsize{11pt}{13pt}\selectfont\textit{#4}}
 	}
-	\vspace{0.2em}
 	\begin{list}{$\hspace{1em}\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
-		\setlength{\itemsep}{-0.6em} \vspace{-0.6em}
+		\setlength{\itemsep}{-0.65em} \vspace{-0.7em} % Left is space between items, right is space before first item
 }{
 	\end{list}
-	\vspace{0.2em}
+	\vspace{-0.2em}
 }
 
 \newenvironment{rSet}[2] % 2 Parameters: Set title, set items
 {
 	\noindent
 	\begin{minipage}{\dimexpr\textwidth-1em\relax} % Subtract 1em from the width to compensate
-		{\hspace{-1em}\fontsize{11pt}{13pt}\selectfont \textbf{#1}} \dotfill {\fontsize{11pt}{13pt}\selectfont #2}\vspace{0.3em}
+		{\hspace{-1em}\fontsize{11pt}{13pt}\selectfont \textbf{#1}} \dotfill {\fontsize{11pt}{13pt}\selectfont #2}
 	\end{minipage}
 }{}
