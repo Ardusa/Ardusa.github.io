@@ -24,8 +24,8 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	top=0.5in, % Top margin
-	bottom=0.5in, % Bottom margin
+	top=0.4in, % Top margin
+	bottom=0.4in, % Bottom margin
 	left=0.5in, % Left margin
 	right=0.5in, % Right margin
 	% showframe, % Uncomment to show how the type block is set on the page
@@ -40,7 +40,7 @@
 	\vspace{-0.2em}
 	\begingroup
 		\begin{center}
-			{{\fontsize{35pt}{37pt}\selectfont\@name}}
+			{{\fontsize{30pt}{32pt}\selectfont\@name}}
 		\end{center}
 	\endgroup
 	\vspace{-0.2em}
@@ -48,12 +48,12 @@
 
 % Print the address, allowing for line breaks with \\ and diamond separators
 \newcommand{\printaddress}{
-	\vspace{0em}
+	\vspace{-0.1em}
 	\begin{center}
 		\def \\ {$\hspace{0.5em}\diamond\hspace{0.5em}$}
-		{{\fontsize{12pt}{14pt}\selectfont\@address}}
+		{{\fontsize{11pt}{13pt}\selectfont\@address}}
 	\end{center}
-	\vspace{0em}
+	\vspace{-0.1em}
 }
 
 % Print name and address at the top of the document automatically
@@ -61,14 +61,13 @@
 \renewcommand{\document}{%
 	\ori@document
 	\printname
-	\vspace{0em}
 	\printaddress
-	\vspace{0em}
 }
 
-% Defines the rSection environment for the major sections within the CV
+% Defines the rSection environment for the major sections within the resume
 \newenvironment{rSection}[2]{ % 2 Parameters: First letter, Section Title
-	\MakeUppercase{{\fontsize{16pt}{18pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{{\fontsize{12pt}{14pt}\selectfont #2}}
+	\vspace{-0.15em}
+	\MakeUppercase{{\fontsize{16pt}{18pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{{\fontsize{11pt}{13pt}\selectfont #2}}
 	\medskip
 	\hrule
 	\begin{list}{}{
@@ -80,6 +79,7 @@
 }
 
 \newenvironment{rSectionEntry}[4]{ % 4 parameters: name of name of thing, dates, tagline, and location
+	\vspace{-0.1em}
 	\textbf{\fontsize{12pt}{14pt}\selectfont #1} \hfill {#2}
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
 		\\
