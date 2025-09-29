@@ -28,3 +28,8 @@ replay_pid*
 
 # Ignore .DS_Store files
 .DS_Store
+
+# Resume Stuff
+.aux
+.log
+.out
