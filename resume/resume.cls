@@ -33,13 +33,13 @@
 
 % Print the name in a large, bold, uppercase style
 \newcommand{\printname}{
-	\vspace{-0.2em}
+	\vspace{-0.3em}
 	\begingroup
 		\begin{center}
 			{{\fontsize{30pt}{32pt}\selectfont\@name}}
 		\end{center}
 	\endgroup
-	\vspace{-0.2em}
+	\vspace{-0.4em}
 }
 
 % Print the address, allowing for line breaks with \\ and diamond separators

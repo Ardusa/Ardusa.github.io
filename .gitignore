@@ -30,6 +30,6 @@ replay_pid*
 .DS_Store
 
 # Resume Stuff
-.aux
-.log
-.out
+*.aux
+*.log
+*.out
