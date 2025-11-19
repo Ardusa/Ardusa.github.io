@@ -46,10 +46,10 @@
 \newcommand{\printaddress}{
 	\vspace{0em}
 	\begin{center}
-		\def \\ {$\hspace{0.5em}|\hspace{0.5em}$}
+		\def \\ {$\hspace{0.5em}|\hspace{0.7em}$}
 		{{\fontsize{11pt}{13pt}\selectfont\@address}}
 	\end{center}
-	\vspace{-0.5em}
+	\vspace{-0.2em}
 }
 
 % Print name and address at the top of the document automatically
@@ -62,10 +62,10 @@
 
 % Defines the rSection environment for the major sections within the resume
 \newenvironment{rSection}[2]{ % 2 Parameters: First letter, Section Title
-	\MakeUppercase{{\fontsize{16pt}{18pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{{\fontsize{11pt}{13pt}\selectfont #2}}
+	\MakeUppercase{{\fontsize{14pt}{16pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{{\fontsize{11pt}{13pt}\selectfont #2}}
 	\vspace{0.3em}
 	\hrule
-	\vspace{-0.1em}
+	\vspace{-0.2em}
 	\begin{list}{}{
 		\setlength{\leftmargin}{1em}
 	}
@@ -78,7 +78,7 @@
 	\textbf{\fontsize{12pt}{14pt}\selectfont #1} \hfill {#2}
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
 		\\
-		{\fontsize{12pt}{14pt}\selectfont\textit{#3}} \hfill {\fontsize{12pt}{14pt}\selectfont\textit{#4}}
+		{\selectfont\textit{#3}} \hfill {\selectfont\textit{#4}\hspace{0.35em}}
 	}
 	\begin{list}{$\hspace{1em}\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
 		\setlength{\itemsep}{-0.65em} \vspace{-0.7em} % Left is space between items, right is space before first item

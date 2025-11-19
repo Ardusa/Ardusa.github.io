@@ -4,10 +4,16 @@
 
 \usepackage{fontspec}
 \usepackage{hyperref}
-\setmainfont{Times New Roman}
+
+\setmainfont[
+  UprightFont    = cmunrm.otf,
+  ItalicFont     = cmunti.otf,
+  BoldFont       = cmunbx.otf,
+  BoldItalicFont = cmunbi.otf
+]{CMU Serif}
 
 \name{Ankur Desai}
-\address{(248) $\hspace{0.01em}$ 657 - 3805 \\ ardusa05@gmail.com \\ \href{https://ardusa.github.io/}{ardusa.github.io} \\ \href{https://linkedin.com/in/ardusa/}{linkedin.com/in/ardusa}}
+\address{(248) $\hspace{0.01em}$ 657 -- 3805 \\ ardusa05@gmail.com \\ \href{https://ardusa.github.io/}{ardusa.github.io} \\ \href{https://linkedin.com/in/ardusa/}{linkedin.com/in/ardusa}}
 
 \begin{document}
 	\begin{rSection}{E}{ducation}
@@ -19,36 +25,36 @@
 	\end{rSection}
 
 	\begin{rSection}{E}{xperience}
-		\begin{rSectionEntry}{Machine Learning Team}{September 2025 - Present}{Unmanned Systems}{East Lansing, MI}
-			\item Architected autonomous drone software on Nvidia Jetson implementing real-time sensor fusion (GPS, IMU, barometer), integrating YOLOv11 object detection for autonomous navigation with obstacle avoidance at 24 FPS.
+		\begin{rSectionEntry}{Michigan State Unmanned Systems Team}{August 2025 -- Present}{Software Engineer}{East Lansing, MI}
+			\item Architected autonomous drone software on Nvidia Jetson implementing real-time sensor fusion (GPS, IMU), integrating YOLOv11 object detection for autonomous navigation with obstacle avoidance.
 			\item Engineered end-to-end machine learning pipeline: curated 5,000+ aerial image dataset, applied data augmentation techniques, and optimized YOLOv11 inference using TensorRT on embedded hardware.
 			\item Integrated computer vision system with Cube Orange+ flight controller via MAVLink protocol, enabling vision-based position hold and autonomous payload delivery within 10-foot precision from 70+ feet altitude.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{Web Development Intern}{May 2025 - August 2025}{WFS Consulting Group}{Plymouth, MI}
+		\begin{rSectionEntry}{Web Development Intern}{June 2025 -- August 2025}{WFS Consulting Group}{Plymouth, MI}
 			\item Designed and developed a responsive website using HTML5, CSS3, and JavaScript, ensuring consistent performance across Chrome, Firefox, Safari, and Edge.
-			\item Reached 95+ Google Lighthouse scores boosting engagement by 250\% through contact forms and Google Analytics.
+			\item Reached 95+ Google Lighthouse scores boosting engagement through contact forms and Google Analytics.
 			\item Deployed production website to Linux servers with Apache and SSL certificates, maintaining 99.9\% uptime.
 		\end{rSectionEntry}
 	\end{rSection}
 
 	\begin{rSection}{P}{rojects}
-		\begin{rSectionEntry}{ThinkStack}{August 2025 - Present}{Project Team Lead | React, Tailwind, FastAPI, Neo4j, PostgreSQL}{East Lansing, MI}
-			\item Architected a full-stack React web application with component-based design, enabling real-time CRUD operations and integrating authentication and role-based access using FastAPI, SQLAlchemy ORM, and PostgreSQL.
-			\item Engineered seamless integration with Neo4j to support dynamic relationship queries for advanced data models.
-			\item Led a team of 6 through Agile/SCRUM, automating CI/CD pipelines with Jest and Pytest, with 87\% code coverage.
+		\begin{rSectionEntry}{ThinkStack}{August 2025 -- Present}{Project Lead | React, Tailwind CSS, FastAPI, Neo4j, PostgreSQL}{East Lansing, MI}
+			\item Architected a full-stack React web application with component-based design, enabling real-time CRUD operations, integrating authentication and role-based access using FastAPI, SQLAlchemy, and PostgreSQL.
+			\item Integrated Neo4j database to support dynamic relationship queries for advanced data models.
+			\item Led 6 engineers through Agile/SCRUM, automating CI/CD pipelines with Jest and Pytest.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{Mira - AI Personal Assistant}{May 2025 - September 2025}{Full-Stack Development | Python, FastAPI, SQL, Electron, React}{\href{https://github.com/mira-assistant}{GitHub Link}}
+		\begin{rSectionEntry}{Mira --- AI Personal Assistant}{May 2025 -- September 2025}{Full-Stack Development | Python, FastAPI, SQL, Electron, React}{\href{https://github.com/mira-assistant}{GitHub Link}}
 			\item Engineered audio processing pipeline with noise reduction using spectral gating, improving OpenAI Whisper speech recognition from 78\% to 95\% accuracy in noisy environments (SNR < 10dB).
-			\item Developed natural language processing pipeline integrating Whisper for transcription, DBSCAN for speaker diarization, and Sentence Transformers for intent classification, processing 1,000+ daily interactions with 92\% accuracy.
+			\item Developed natural language processing pipeline integrating Whisper for transcription, DBSCAN for speaker diarization, and Sentence Transformers for intent classification with 92\% accuracy.
 			\item Implemented intelligent client selection algorithm using RSSI proximity estimation and FFT ambient noise analysis for dynamic command routing with 89\% selection accuracy.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{WizViz - SpartaHack X}{February 2025}{Hackathon | Python, OpenCV, MediaPipe, PyGame}{\href{https://devpost.com/software/wizviz}{Devpost Link}}
-			\item Built a real-time multiplayer AR game using OpenCV and PyGame, achieving 60 FPS on Windows and MacOS.
-			\item Implemented gesture-based controls and custom physics engine with collision detection for 2-player wizard duels.
-			\item Used MediaPipe Pose for skeletal tracking on 33 landmarks with sub-30ms latency; won Interactive Media track among 100+ projects and 350+ participants at SpartaHack X.
+		\begin{rSectionEntry}{WizViz}{February 2025}{SpartaHack X | Python, OpenCV, MediaPipe, PyGame}{\href{https://devpost.com/software/wizviz}{Devpost Link}}
+			\item Developed real-time multiplayer AR wizard-duel game using OpenCV and PyGame, winning the Interactive Media track among 100+ projects and 350+ participants at SpartaHack X
+			\item Built a custom physics game engine with collision detection for gesture-based controls and interactions.
+			\item Used MediaPipe Pose for skeletal tracking of 2 players on 33 landmarks with sub-30ms at 60 FPS.
 		\end{rSectionEntry}
 	\end{rSection}
 
@@ -59,9 +65,9 @@
 		\end{rSet}
 		\begin{rSet}{Databases}{PostgreSQL, Neo4j, AWS RDS}
 		\end{rSet}
-		\begin{rSet}{Frameworks}{React, Vite, Node.js, Electron, FastAPI, SQLAlchemy, Tailwind CSS}
+		\begin{rSet}{Frameworks}{React, Vite, Node.js, Electron, FastAPI, SQLAlchemy, Tailwind}
 		\end{rSet}
-		\begin{rSet}{Cloud \& DevOps}{Docker, Git, CI/CD Pipelines, AWS (Lambda, EC2, Cloudwatch), Google Cloud Platform}
+		\begin{rSet}{Cloud \& DevOps}{Docker, Git, CI/CD, AWS (Lambda, EC2, ECS), Google Cloud Platform}
 		\end{rSet}
 	\end{rSection}
 
