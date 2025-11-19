@@ -1,4 +1,4 @@
-\ProvidesClass{resume}[09/28/2025 v5.0 Ankur's Resume Class]
+\ProvidesClass{resume}[11/17/2025 v6.0 Ankur's Resume Class]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -20,8 +20,8 @@
 \usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
-	top=0.5in, % Top margin
-	bottom=0.5in, % Bottom margin
+	top=0.4in, % Top margin
+	bottom=0.4in, % Bottom margin
 	left=0.5in, % Left margin
 	right=0.5in, % Right margin
 	% showframe, % Uncomment to show how the type block is set on the page
@@ -36,7 +36,7 @@
 	\vspace{-0.3em}
 	\begingroup
 		\begin{center}
-			{{\fontsize{30pt}{32pt}\selectfont\@name}}
+			{{\fontsize{24pt}{26pt}\selectfont\@name}}
 		\end{center}
 	\endgroup
 	\vspace{-0.4em}
@@ -49,7 +49,7 @@
 		\def \\ {$\hspace{0.5em}|\hspace{0.5em}$}
 		{{\fontsize{11pt}{13pt}\selectfont\@address}}
 	\end{center}
-	\vspace{-0.35em}
+	\vspace{-0.5em}
 }
 
 % Print name and address at the top of the document automatically
@@ -62,10 +62,10 @@
 
 % Defines the rSection environment for the major sections within the resume
 \newenvironment{rSection}[2]{ % 2 Parameters: First letter, Section Title
-	% \vspace{-0.15em}
 	\MakeUppercase{{\fontsize{16pt}{18pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{{\fontsize{11pt}{13pt}\selectfont #2}}
-	\medskip
+	\vspace{0.3em}
 	\hrule
+	\vspace{-0.1em}
 	\begin{list}{}{
 		\setlength{\leftmargin}{1em}
 	}
@@ -75,7 +75,6 @@
 }
 
 \newenvironment{rSectionEntry}[4]{ % 4 parameters: name of name of thing, dates, tagline, and location
-	% \vspace{-0.1em}
 	\textbf{\fontsize{12pt}{14pt}\selectfont #1} \hfill {#2}
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
 		\\
@@ -85,21 +84,8 @@
 		\setlength{\itemsep}{-0.65em} \vspace{-0.7em} % Left is space between items, right is space before first item
 }{
 	\end{list}
-	\vspace{-0.2em}
+	\vspace{-0.4em}
 }
-
-\newenvironment{rSectionEntryNoBullets}[4]{ % name, dates, tagline, location
-    \noindent
-    \textbf{\fontsize{12pt}{14pt}\selectfont #1} \hfill {#2} \par
-    \ifthenelse{\equal{#3}{}}{}{
-        \vspace{-0.6em}
-        \noindent
-        {\fontsize{11.5pt}{13pt}\selectfont \textit{#3}} \hfill {\fontsize{11.5pt}{13pt}\selectfont \textit{#4}} \par
-    }
-}{%
-    \vspace{-0.2em}
-}
-
 
 \newenvironment{rSet}[2] % 2 Parameters: Set title, set items
 {
