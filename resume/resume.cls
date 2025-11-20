@@ -8,16 +8,21 @@
 \usepackage[parfill]{parskip}
 
 \usepackage{array}
-
 \usepackage{ifthen}
-
 \usepackage{graphicx}
-
 \usepackage{amsmath}
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+\usepackage{fontspec}
+\usepackage{hyperref}
+
+\setmainfont[
+  UprightFont    = cmunrm.otf,
+  ItalicFont     = cmunti.otf,
+  BoldFont       = cmunbx.otf,
+  BoldItalicFont = cmunbi.otf
+]{CMU Serif}
 
 \pagestyle{empty}
-
-\usepackage{geometry} % Required for adjusting page dimensions and margins
 
 \geometry{
 	top=0.4in, % Top margin
