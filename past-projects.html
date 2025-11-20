@@ -28,45 +28,26 @@
     <div class="project-container">
         <div class="project-card">
             <div class="header">
-                <h2>Crescendo</h2>
-                <button class="github-link"
-                    onclick="window.open('https://github.com/robostangs/Crescendo', '_blank')"><i
+                <h2>Mira</h2>
+                <button class="github-link" onclick="window.open('https://github.com/mira-assistant/', '_blank')"><i
                         class="fab fa-github"></i> View Project</button>
             </div>
 
-            <p>This is the code I co-authored as part of FRC 548 (The Robostangs). I invested a lot of time into
-                this and learned about automation and object oriented programming.</p>
-            <div class="tags" id="tags-container-1">
-
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const selectedTags = tags.filter(tag => ['Java', 'Project Management', 'Python'].includes(tag.name));
-                        const container = document.getElementById('tags-container-1');
-                        selectedTags.forEach(tag => {
-                            const tagElement = createTag(tag);
-                            container.appendChild(tagElement);
-                        });
-                    });
-                </script>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="header">
-                <h2>Chello WebApp</h2>
-                <button class="github-link"
-                    onclick="window.open('https://github.com/Ardusa/chello-frontend-webapp', '_blank')"><i
-                        class="fab fa-github"></i> View Project</button>
-            </div>
-
-            <p>A web application where I learned how to use React and JavaScript to create an intuitive and
-                interactive frontend experience.</p>
+            <p>
+                This is a personal assistant I built that passively listens to your interactions and proactively acts
+                upon tasks and to-dos.
+            </p>
+            <p>
+                Mira runs on multiple devices and uses an algorithm to select a listening client, then transcribes audio
+                using NoiseReduce and OpenAI Whisper, finally utilizing natural language processing, Mira extracts
+                actionable information and completes tasks in the background using external APIs.
+            </p>
 
             <div class="tags" id="tags-container-3">
 
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        const selectedTags = tags.filter(tag => ['React', 'JavaScript', 'HTML'].includes(tag.name));
+                        const selectedTags = tags.filter(tag => ['Python', 'WebSockets', 'React', 'AI/ML', 'SQL'].includes(tag.name));
                         const container = document.getElementById('tags-container-3');
                         selectedTags.forEach(tag => {
                             const tagElement = createTag(tag);
@@ -84,17 +65,19 @@
                         class="fab fa-github"></i> View Project</button>
             </div>
 
-            <p style="margin-bottom: 5px;">This is a project I completed during SpartaHack X and is also the first
-                Hackathon project I ever
-                participated in. At SpartaHack X our team won the Best Game award.</p>
-            <p style="margin-top: 5px;">In this projects, I worked on the computer vision, using the camera to detect
-                gestures which would
-                then translate to game actions.</p>
+            <p>
+                WizViz is a multiplayer AR Wizard game. We used MediaPipe Pose to track 33 skeletal landmarks, enabling
+                real-time gestures like heal, attack, and defend.
+            </p>
+            <p>
+                I completed WizViz at my first hackathon: SpartaHack X, and we were able to win the Interactive Media
+                Track, competing amongst 350+ participants and 100+ projects.
+            </p>
             <div class="tags" id="tags-container-2">
 
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        const selectedTags = tags.filter(tag => ['Python', 'Computer Vision', 'Project Management'].includes(tag.name));
+                        const selectedTags = tags.filter(tag => ['Python', 'Computer Vision', 'AI/ML', 'Hackathon'].includes(tag.name));
                         const container = document.getElementById('tags-container-2');
                         selectedTags.forEach(tag => {
                             const tagElement = createTag(tag);
@@ -108,23 +91,24 @@
 
         <div class="project-card">
             <div class="header">
-                <h2>Chello Backend</h2>
-                <button class="github-link"
-                    onclick="window.open('https://github.com/Ardusa/chello-backend', '_blank')"><i
-                        class="fab fa-github"></i> View Project</button>
+                <h2>ThinkStack</h2>
+                <button class="github-link" disabled title="this project is still in development"><i
+                        class="fab fa-github"></i> Still In Development</button>
             </div>
 
-            <p style="margin-bottom: 5px;">This is the backend code for the Chello project I have been working on.
-                Chello is an app for businesses or individuals software engineers to help build a schedule and mantain
-                throughout production.</p>
-            <p style="margin-top: 5px;">This code handles all of the AI features of the app, such as prioritization
-                logic, dependency detection, and it also handles the websocket connections as well as the SQL database.
+            <p>
+                This project was done through the Imagine Software club, I was chosen to lead a team of 4 developers and
+                2 designers, building a product for a startup founder.
+            </p>
+            <p>
+                ThinkStack is a relationship powered note-taking application. Instead of pages and hyperlinks,
+                ThinkStack uses Concepts and Relationships to promote creative freedom.
             </p>
             <div class="tags" id="tags-container-4">
 
                 <script>
                     document.addEventListener('DOMContentLoaded', () => {
-                        const selectedTags = tags.filter(tag => ['Python', 'AI', 'WebSockets', 'SQL'].includes(tag.name));
+                        const selectedTags = tags.filter(tag => ['Python', 'SQL', 'React', 'Team Lead', 'Neo4j'].includes(tag.name));
                         const container = document.getElementById('tags-container-4');
                         selectedTags.forEach(tag => {
                             const tagElement = createTag(tag);
@@ -134,6 +118,38 @@
                 </script>
             </div>
 
+        </div>
+
+        <div class="project-card">
+            <div class="header">
+                <h2>Crescendo</h2>
+                <button class="github-link"
+                    onclick="window.open('https://github.com/robostangs/Crescendo', '_blank')"><i
+                        class="fab fa-github"></i> View Project</button>
+            </div>
+
+            <p>
+                This is 2024 FIRST Robotics Challenge code, built upon WPILib. As the software lead and robot driver I
+                was a pivotal member of the Robostangs, propelling us to Houston for a chance to play for the World
+                Title.
+            </p>
+            <p>
+                After placing 16th in the Galileo division, our best placement in half a decade, we were unfortunately
+                not selected for playoffs. This is where my passion for Software Engineering was born.
+            </p>
+            <div class="tags" id="tags-container-1">
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const selectedTags = tags.filter(tag => ['Java', 'Python', 'Computer Vision', 'Team Lead'].includes(tag.name));
+                        const container = document.getElementById('tags-container-1');
+                        selectedTags.forEach(tag => {
+                            const tagElement = createTag(tag);
+                            container.appendChild(tagElement);
+                        });
+                    });
+                </script>
+            </div>
         </div>
     </div>
 

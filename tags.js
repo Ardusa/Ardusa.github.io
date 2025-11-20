@@ -20,18 +20,18 @@ const tags = [
         className: 'tag-green'
     },
     {
-        name: 'Project Management',
+        name: 'Team Lead',
         color: 'pink',
         className: 'tag-pink'
     }
     ,
     {
-        name: 'JavaScript',
+        name: 'AI/ML',
         color: 'orange',
         className: 'tag-orange'
     },
     {
-        name: 'HTML',
+        name: 'Neo4j',
         color: 'cyan',
         className: 'tag-cyan'
     },
@@ -41,7 +41,7 @@ const tags = [
         className: 'tag-purple'
     },
     {
-        name: 'AI',
+        name: 'Hackathon',
         color: 'brown',
         className: 'tag-brown'
     },
