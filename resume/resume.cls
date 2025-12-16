@@ -79,9 +79,12 @@
 	\end{list}
 }
 
-\newenvironment{rSectionEntry}[5]{ % 4 parameters: name of name of thing, dates, tagline, and location
-	\textbf{\fontsize{12pt}{14pt}\selectfont #1} \hfill {#2}
-	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output parameters 3, 4
+\newenvironment{rSectionEntry}[5]{ % 5 parameters: name, dates, tagline, tagline #2, location
+	\textbf{\fontsize{12pt}{14pt}\selectfont #1}
+	\ifthenelse{\equal{#4}{}}{}%
+		{ | \selectfont\textit{#4}}
+	\hfill {#2}
+	\ifthenelse{\equal{#5}{}}{}{ % If the fifth parameter is empty, don't output parameters 3, 4, 5
 		\\
 		{#3\ifthenelse{\equal{#4}{}}{}{ | \selectfont\textit{#4}}} \hfill {\selectfont\textit{#5}\hspace{0.35em}}
 	}
