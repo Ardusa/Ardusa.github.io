@@ -538,20 +538,51 @@ button.github-link:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 100px;
+    width: 90%;
+}
+
+.about-hero {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.hero-headshot {
+    height: 350px;
+    border: solid 10px rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.about-info {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    width: 80%;
 }
 
 .about-container h2 {
     font-family: var(--header-font);
-    font-size: 30px;
+    font-size: 45px;
     margin: 0px;
 }
 
-.about-container p {
+.about-container ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.about-container li {
     font-family: var(--body-font);
     font-size: 20px;
     margin: 0px;
+    gap: 5px;
+    margin-top: 12px;
 }
 
 .contact-container {
