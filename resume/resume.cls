@@ -44,7 +44,7 @@
 			{{\fontsize{24pt}{26pt}\selectfont\@name}}
 		\end{center}
 	\endgroup
-	\vspace{-0.4em}
+	\vspace{0.1em}
 }
 
 % Print the address, allowing for line breaks with \\ and diamond separators
@@ -54,7 +54,7 @@
 		\def \\ {$\hspace{0.5em}|\hspace{0.7em}$}
 		{{\fontsize{11pt}{13pt}\selectfont\@address}}
 	\end{center}
-	\vspace{-0.2em}
+	\vspace{0.2em}
 }
 
 % Print name and address at the top of the document automatically
@@ -89,7 +89,7 @@
 		\setlength{\itemsep}{-0.65em} \vspace{-0.7em} % Left is space between items, right is space before first item
 }{
 	\end{list}
-	\vspace{-0.4em}
+	\vspace{-0.1em}
 }
 
 \newenvironment{rSet}[2] % 2 Parameters: Set title, set items
