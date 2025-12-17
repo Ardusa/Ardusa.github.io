@@ -1,4 +1,4 @@
-\ProvidesClass{resume}[11/17/2025 v6.0 Ankur's Resume Class]
+\ProvidesClass{resume}[12/17/2025 v7.0 Ankur's Resume Class]
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -32,37 +32,32 @@
 	% showframe, % Uncomment to show how the type block is set on the page
 }
 
-% Define \name and \address to store values in macros
 \newcommand{\name}[1]{\def\@name{#1}}
-\newcommand{\address}[1]{\def\@address{#1}}
+\newcommand{\contact}[1]{\def\@contact{#1}}
 
-% Print the name in a large, bold, uppercase style
 \newcommand{\printname}{
-	\vspace{-0.3em}
 	\begingroup
 		\begin{center}
 			{{\fontsize{24pt}{26pt}\selectfont\@name}}
 		\end{center}
 	\endgroup
-	\vspace{0.1em}
 }
 
-% Print the address, allowing for line breaks with \\ and diamond separators
-\newcommand{\printaddress}{
-	\vspace{0em}
+\newcommand{\printcontact}{
 	\begin{center}
 		\def \\ {$\hspace{0.5em}|\hspace{0.7em}$}
-		{{\fontsize{11pt}{13pt}\selectfont\@address}}
+		{{\fontsize{11pt}{13pt}\selectfont\@contact}}
 	\end{center}
-	\vspace{0.2em}
 }
 
-% Print name and address at the top of the document automatically
+% Print name and contact at the top of the document automatically
 \let\ori@document=\document % Store the original \document command
 \renewcommand{\document}{%
 	\ori@document
 	\printname
-	\printaddress
+	\vspace{-0.25em}
+	\printcontact
+	\vspace{-0.25em}
 }
 
 % Defines the rSection environment for the major sections within the resume
@@ -92,7 +87,7 @@
 		\setlength{\itemsep}{-0.65em} \vspace{-0.7em} % Left is space between items, right is space before first item
 }{
 	\end{list}
-	\vspace{-0.1em}
+	\vspace{-0.13em}
 }
 
 \newenvironment{rSet}[2] % 2 Parameters: Set title, set items

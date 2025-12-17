@@ -3,7 +3,7 @@
 ]{../resume}
 
 \name{Ankur Desai}
-\address{(248) $\hspace{-0.1em}$ 657 $\hspace{-0.4em}$ -- $\hspace{-0.4em}$ 3805 \\ ardusa05@gmail.com \\ \href{https://ardusa.github.io/}{ardusa.github.io} \\ \href{https://linkedin.com/in/ardusa/}{linkedin.com/in/ardusa}}
+\contact{(248) $\hspace{-0.1em}$ 657 $\hspace{-0.4em}$ -- $\hspace{-0.4em}$ 3805 \\ ardusa05@gmail.com \\ \href{https://ardusa.github.io/}{ardusa.github.io} \\ \href{https://linkedin.com/in/ardusa/}{linkedin.com/in/ardusa}}
 
 \begin{document}
 	\begin{rSection}{E}{ducation}
@@ -15,18 +15,18 @@
 	\end{rSection}
 
 	\begin{rSection}{E}{xperience}
-		\begin{rSectionEntry}{Michigan State Unmanned Systems}{November 2025 -- Present}{Software Engineer --- Autonomous Systems}{}{East Lansing, MI}
-			\item Developed autonomous drone software on Nvidia Jetson using MAVLink and Orange+ Flight controller.
-			\item Engineered autonomous payload delivery system capable of releasing packages from 70+ feet altitude with a precision of $\pm7$ feet.
-			\item Built a machine learning pipeline: curated a 5,000+ aerial image dataset and optimized YOLOv11 inference using TensorRT on embedded CUDA hardware, achieving 79\% detection accuracy at 30 FPS.
+		\begin{rSectionEntry}{Michigan State Unmanned Systems}{Nov. 2025 -- Present}{Software Engineer --- Autonomous Systems}{}{East Lansing, MI}
+			\item Engineered autonomous drone payload delivery system on Nvidia Jetson, integrating MAVLink and Orange+ flight controller, capable of releasing packages from 70+ feet altitude with a precision of $\pm7$ feet.
+			\item Constructed machine learning pipeline: curated a 5,000+ aerial image dataset and optimized YOLO inference using TensorRT on embedded CUDA hardware at 30 FPS.
 			\item Researched and implemented advanced path-planning; compared A* and Dijkstra's algorithms, developing a custom A* based solution for efficient multi-waypoint autonomous navigation.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{ThinkStack --- Note Taking Tool}{September 2025 -- November 2025}{Project Lead}{}{East Lansing, MI}
+		\begin{rSectionEntry}{ThinkStack --- Relationship Powered Note Taking Application}{Sept. 2025 -- Nov. 2025}{Project Lead}{}{East Lansing, MI}
+			\item Developed a note-taking app using a chapter-and-page model, letting users organize projects, compose layered Markdown, and visually connect ideas with Neo4j-powered links.
+			\item Built a modular React web app with Vite and Tailwind CSS for rapid and responsive styling, component-based architecture, efficient batching algorithms using the marked library, and OAuth2 authentication.
+			\item Designed and implemented containerized RESTful API with secure JWT-based authentication and CORS middleware, integrating PostgreSQL and Neo4j in a cohesive dual-database architecture.
 			\item Led agile SCRUM team of 6 software engineers, coordinating sprints and communicating goals with client.
 			\item Streamlined collaboration with CI/CD pipelines, boosting unit test code coverage to 87\%.
-			\item Built a modular React web app with Vite and Tailwind CSS for rapid and responsive styling, component-based architecture, efficient batching algorithms using the marked library, and OAuth2.0 authentication.
-			\item Designed and implemented containerized RESTful API with secure JWT-based authentication and CORS middleware, integrating PostgreSQL and Neo4j in a cohesive dual-database architecture.
 		\end{rSectionEntry}
 	\end{rSection}
 
@@ -37,14 +37,15 @@
 		% \end{rSectionEntry}
 
 		\begin{rSectionEntry}{Mira --- AI Personal Assistant}{May 2025 -- Present}{Full-Stack Development}{FastAPI, PostgreSQL, Next.js}{}
-			\item Deployed a containerized FastAPI backend on AWS Lambda and AWS RDS, integrating Gemini API and optimizing with asynchronous processing, lazy loading, and dependency injection.
-			\item Developed Retrieval-Augmented Generation (RAG) pipelines, utilized sentiment analysis and Named Entity Recognition to disambiguate user commands by augmenting context with relevant prior information.
+			\item Engineered an AI assistant that continuously fuses audio from multiple devices, detects actionable intent, builds LLM prompts with context and integrates with user tools to asynchronously complete tasks.
+			\item Deployed containerized FastAPI backend on AWS Lambda and AWS RDS, optimized with CORS middleware, asynchronous processing, lazy loading, and dependency injection.
 			\item Increased Whisper model accuracy by 63\% through spectral gating, denoising, and dynamic gain control.
-			\item Built a cross-platform Electron and Next.js desktop client for real-time voice command processing, integrating RTC-based Voice Activity Detection (VAD) for low-latency audio processing.
-			\item Implemented OAuth2 authentication with CORS middleware, integrated OS keychain for secure credential storage, empowering cloud-based infrastructure for real-time synchronization and WebSocket updates.
+			\item Implemented RAG pipelines incorporating sentiment analysis and Named Entity Recognition (NER) to determine intent and disambiguate user commands by augmenting Gemini API prompt with context.
+			\item Designed Electron and Next.js desktop client, integrating WebSockets and RTC-based Voice Activity Detection (VAD) for low-latency audio processing of user surroundings and commands.
+			% \item Implemented OAuth2 authentication, integrated OS keychain for secure credential storage, empowering cloud-based infrastructure for real-time synchronization and WebSocket updates.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{WizViz --- Multiplayer AR Wizard Game}{February 2025}{SpartaHack X}{MediaPipe, OpenCV, PyGame}{}
+		\begin{rSectionEntry}{WizViz --- Multiplayer AR Wizard Game}{Feb. 2025}{SpartaHack X}{MediaPipe, OpenCV, PyGame}{}
 			\item Developed real-time multiplayer AR wizard-duel game using OpenCV and PyGame, winning the Interactive Media track among 100+ projects and 350+ participants at SpartaHack X.
 			\item Built a custom physics game engine with collision detection for gesture-based controls and interactions.
 			\item Used MediaPipe Pose for skeletal tracking of 2 players on 33 landmarks with sub-30ms at 60 FPS.
@@ -54,11 +55,11 @@
 	\begin{rSection}{T}{echnical Skills}
 		\begin{rSet}{Languages}{Python, Java, C/C++, JavaScript/TypeScript, HTML5, CSS3, SQL, Bash}
 		\end{rSet}
-		\begin{rSet}{Libraries}{TensorFlow, PyTorch, OpenCV, MediaPipe, YOLOv11, NumPy, Sentence Transformers}
+		\begin{rSet}{Frameworks}{React, Next.js, Vite, Node.js, Electron, FastAPI, SQLAlchemy, Tailwind}
+		\end{rSet}
+		\begin{rSet}{Libraries}{TensorFlow, PyTorch, OpenCV, MediaPipe, YOLO, Sentence Transformers}
 		\end{rSet}
 		\begin{rSet}{Databases}{PostgreSQL, Neo4j, AWS RDS}
-		\end{rSet}
-		\begin{rSet}{Frameworks}{React, Vite, Node.js, Electron, FastAPI, SQLAlchemy, Tailwind}
 		\end{rSet}
 		\begin{rSet}{Cloud \& DevOps}{Docker, Git, CI/CD, AWS (Lambda, EC2, ECS), Google Cloud Platform}
 		\end{rSet}
