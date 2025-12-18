@@ -9,24 +9,23 @@
 	\begin{rSection}{E}{ducation}
 		\begin{rSectionEntry}{Michigan State University}{Expected, May 2028}{B.S. in Computer Science}{}{East Lansing, MI}
 			\item GPA: 3.74 / 4.0
-			\item Involvement: VP of Claude Builder Club, Eagle Scout
+			\item Involvement: Vice President of Claude Builder Club @ MSU, Eagle Scout
 			\item Relevant Coursework: Linear Algebra, Discrete Mathematics, Object-Oriented Software Design, Computer Organization and Architecture, Data Structures \& Algorithms
 		\end{rSectionEntry}
 	\end{rSection}
 
 	\begin{rSection}{E}{xperience}
-		\begin{rSectionEntry}{Michigan State Unmanned Systems}{Nov. 2025 -- Present}{Software Engineer --- Autonomous Systems}{}{East Lansing, MI}
-			\item Engineered autonomous drone payload delivery system on Nvidia Jetson, integrating MAVLink and Orange+ flight controller, capable of releasing packages from 70+ feet altitude with a precision of $\pm7$ feet.
-			\item Constructed machine learning pipeline: curated a 5,000+ aerial image dataset and optimized YOLO inference using TensorRT on embedded CUDA hardware at 30 FPS.
-			\item Researched and implemented advanced path-planning; compared A* and Dijkstra's algorithms, developing a custom A* based solution for efficient multi-waypoint autonomous navigation.
+		\begin{rSectionEntry}{MSU Unmanned Systems --- SUAS Competition}{Feb. 2025 -- Present}{Software Engineer --- Autonomous Systems}{}{East Lansing, MI}
+			\item Engineered autonomous drone payload delivery system on Nvidia Jetson, integrating MAVLink and Orange+ flight controller, capable of releasing packages from 80+ feet altitude with a precision of $\pm3$ feet.
+			\item Built machine learning pipeline: cleaned and labeled 5K aerial images, trained and tuned YOLOv11 model, and validated real-time inference on embedded CUDA hardware with TensorRT through regression tests.
+			\item Benchmarked Python inference against a refactored C++ implementation, achieving a 36\% improvement in detection latency on embedded platforms.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{ThinkStack --- Relationship Powered Note Taking Application}{Sept. 2025 -- Nov. 2025}{Project Lead}{}{East Lansing, MI}
-			\item Developed a note-taking app using a chapter-and-page model, letting users organize projects, compose layered Markdown, and visually connect ideas with Neo4j-powered links.
+		\begin{rSectionEntry}{ThinkStack --- Relationship Powered Note Taking Tool}{Aug. 2025 -- Nov. 2025}{Software Engineer}{}{East Lansing, MI}
+			\item Led team of 4 developers as project lead, developing a note-taking app using a chapter-and-page model, letting users compose concepts, layer Markdown segments, and visually connect ideas with annotated links.
+			\item Orchestrated agile sprints and CI/CD workflows, and expanded PyTest and Jest testing suites to achieve 94\% code coverage through unit and integration tests.
+			\item Implemented a dual-database architecture integrating PostgreSQL and Neo4j, increasing query speeds by 48\% and reducing database load by 30\%.
 			\item Built a modular React web app with Vite and Tailwind CSS for rapid and responsive styling, component-based architecture, efficient batching algorithms using the marked library, and OAuth2 authentication.
-			\item Designed and implemented containerized RESTful API with secure JWT-based authentication and CORS middleware, integrating PostgreSQL and Neo4j in a cohesive dual-database architecture.
-			\item Led agile SCRUM team of 6 software developers, coordinating sprints and communicating goals with client.
-			\item Streamlined collaboration with CI/CD pipelines, boosting unit test code coverage to 87\%.
 		\end{rSectionEntry}
 	\end{rSection}
 
@@ -38,9 +37,9 @@
 
 		\begin{rSectionEntry}{Mira --- AI Personal Assistant}{May 2025 -- Present}{Full-Stack Development}{FastAPI, PostgreSQL, Next.js}{}
 			\item Engineered an AI assistant that continuously fuses audio from multiple devices, detects actionable intent, builds LLM prompts with context and integrates with user tools to asynchronously complete tasks.
-			\item Deployed containerized FastAPI backend on AWS Lambda and AWS RDS, optimized with CORS middleware, asynchronous processing, lazy loading, and dependency injection.
-			\item Increased Whisper model accuracy by 63\% through spectral gating, denoising, and dynamic gain control.
 			\item Implemented RAG pipelines incorporating sentiment analysis and Named Entity Recognition (NER) to determine intent and disambiguate user commands by augmenting Gemini API prompt with context.
+			\item Improved Whisper model accuracy from 91\% to 98\% through spectral gating, denoising, and gain control.
+			\item Deployed containerized FastAPI backend on AWS EC2 instance with AWS RDS integration, optimized with lazy loading, and dependency injection.
 			\item Designed Electron and Next.js desktop client, integrating WebSockets and RTC-based Voice Activity Detection (VAD) for low-latency audio processing of user surroundings and commands.
 			% \item Implemented OAuth2 authentication, integrated OS keychain for secure credential storage, empowering cloud-based infrastructure for real-time synchronization and WebSocket updates.
 		\end{rSectionEntry}
@@ -48,20 +47,20 @@
 		\begin{rSectionEntry}{WizViz --- Multiplayer AR Wizard Game}{Feb. 2025}{SpartaHack X}{MediaPipe, OpenCV, PyGame}{}
 			\item Developed real-time multiplayer AR wizard-duel game using OpenCV and PyGame, winning the Interactive Media track among 100+ projects and 350+ participants at SpartaHack X.
 			\item Built a custom physics game engine with collision detection for gesture-based controls and interactions.
-			\item Used MediaPipe Pose for skeletal tracking of 2 players on 33 landmarks with sub-30ms at 60 FPS.
+			\item Used MediaPipe Pose for skeletal tracking of 2 players on 33 landmarks with sub-20ms at 60 FPS.
 		\end{rSectionEntry}
 	\end{rSection}
 
 	\begin{rSection}{T}{echnical Skills}
-		\begin{rSet}{Languages}{Python, Java, C/C++, JavaScript/TypeScript, HTML5, CSS3, SQL, Bash}
+		\begin{rSet}{Languages}{Python, Java, C/C++, JavaScript/TypeScript, HTML5, CSS3}
 		\end{rSet}
 		\begin{rSet}{Frameworks}{React, Next.js, Vite, Node.js, Electron, FastAPI, SQLAlchemy, Tailwind}
 		\end{rSet}
 		\begin{rSet}{Libraries}{TensorFlow, PyTorch, OpenCV, MediaPipe, YOLO, Sentence Transformers}
 		\end{rSet}
-		\begin{rSet}{Databases}{PostgreSQL, Neo4j, AWS RDS}
+		\begin{rSet}{Databases}{PostgreSQL, Neo4jÍ, AWS RDS}
 		\end{rSet}
-		\begin{rSet}{Cloud \& DevOps}{Docker, Git, CI/CD, AWS (Lambda, EC2, ECS), Google Cloud Platform}
+		\begin{rSet}{Cloud \& DevOps}{Docker, Git, CI/CD, AWS (EC2, ECS, CloudWatch), Google Cloud Platform}
 		\end{rSet}
 	\end{rSection}
 
