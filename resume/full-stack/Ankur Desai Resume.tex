@@ -9,45 +9,50 @@
 	\begin{rSection}{E}{ducation}
 		\begin{rSectionEntry}{Michigan State University}{Expected, May 2028}{B.S. in Computer Science}{}{East Lansing, MI}
 			\item GPA: 3.74 / 4.0
-			\item Involvement: Vice President of Claude Builder Club @ MSU, Eagle Scout
+			\item Involvement: Vice President \& Ambassador of Claude Builder Club, Eagle Scout
 			\item Relevant Coursework: Linear Algebra, Discrete Mathematics, Object-Oriented Software Design, Computer Organization and Architecture, Data Structures \& Algorithms
 		\end{rSectionEntry}
 	\end{rSection}
 
 	\begin{rSection}{E}{xperience}
-		\begin{rSectionEntry}{MSU Unmanned Systems --- SUAS Competition}{Feb. 2025 -- Present}{Software Engineer --- Autonomous Systems}{}{East Lansing, MI}
-			\item Engineered autonomous drone payload delivery system on Nvidia Jetson, integrating MAVLink and Orange+ flight controller, capable of releasing packages from 80+ feet altitude with a precision of $\pm3$ feet.
+		\begin{rSectionEntry}{Michigan State University Unmanned Systems}{Feb. 2025 -- Present}{Software Engineer}{}{East Lansing, MI}
+			\item Engineered autonomous drone payload delivery system on Nvidia Jetson, integrating MAVLink and Orange+ flight controller, capable of releasing packages from 80+ feet altitude with a precision of $\pm \hspace{-0.25em}$ 3 feet.
 			\item Built machine learning pipeline: cleaned and labeled 5K aerial images, trained and tuned YOLOv11 model, and validated real-time inference on embedded CUDA hardware with TensorRT through regression tests.
 			\item Benchmarked Python inference against a refactored C++ implementation, achieving a 36\% improvement in detection latency on embedded platforms.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{ThinkStack --- Relationship Powered Note Taking Tool}{Aug. 2025 -- Nov. 2025}{Software Engineer}{}{East Lansing, MI}
+		\begin{rSectionEntry}{MindMosaic --- Relationship Powered Note Taking Tool}{Aug. 2025 -- Nov. 2025}{Software Engineer}{}{East Lansing, MI}
 			\item Led team of 4 developers as project lead, developing a note-taking app using a chapter-and-page model, letting users compose concepts, layer Markdown segments, and visually connect ideas with annotated links.
 			\item Orchestrated agile sprints and CI/CD workflows, and expanded PyTest and Jest testing suites to achieve 94\% code coverage through unit and integration tests.
 			\item Implemented a dual-database architecture integrating PostgreSQL and Neo4j, increasing query speeds by 48\% and reducing database load by 30\%.
 			\item Built a modular React web app with Vite and Tailwind CSS for rapid and responsive styling, component-based architecture, efficient batching algorithms using the marked library, and OAuth2 authentication.
 		\end{rSectionEntry}
+
+		\begin{rSectionEntry}{WFS Consulting Group}{June 2025 -- August 2025}{Web Development Intern}{}{Plymouth, MI}
+			\item Crafted Figma design and implemented responsive React application using JavaScript and HTML5.
+			\item Achieved 95+ Google Lighthouse scores and increased engagement and visibility through contact forms.
+			% \item Deployed prduction website on Linux server using SSL certificates and integrated Google Analytics.
+		\end{rSectionEntry}
+
 	\end{rSection}
 
 	\begin{rSection}{P}{rojects}
-		% \begin{rSectionEntry}{box.io --- Immersive Browser-Based 3D Boxing Application}{December 2025 -- Present}{System Design}{React, Node.js, Express.js, MongoDB, Three.js, MediaPipe, Tailwind}{}
+		% \begin{rSectionEntry}{box.io --- 3D Boxing Game}{December 2025 -- Present}{}{Three.js, MediaPipe, React, WebSockets}{}
 		% 	\item Developing a browser-based 3D boxing application using React and Three.js, integrating real-time animations and 3D object interactions with React Three Fiber.
-		% 	\item Leveraging Vite and Tailwind CSS for fast development and optimized builds, while enforcing TypeScript-based type safety and code quality through robust linting workflows.
+		% 	\item Leveraging Vite and Tailwind CSS for fast and optimized builds, while enforcing TypeScript-based type safety, robust linting workflows, unit \& integration testing suites.
 		% \end{rSectionEntry}
 
-		\begin{rSectionEntry}{Mira --- AI Personal Assistant}{May 2025 -- Present}{Full-Stack Development}{FastAPI, PostgreSQL, Next.js}{}
-			\item Engineered an AI assistant that continuously fuses audio from multiple devices, detects actionable intent, builds LLM prompts with context and integrates with user tools to asynchronously complete tasks.
-			\item Implemented RAG pipelines incorporating sentiment analysis and Named Entity Recognition (NER) to determine intent and disambiguate user commands by augmenting Gemini API prompt with context.
+		\begin{rSectionEntry}{Mira --- AI Personal Assistant}{May 2025 -- Nov. 2025}{}{FastAPI, PostgreSQL, Next.js, Tailwind}{}
+			\item Engineered an AI assistant that continuously fuses audio from multiple devices, detects actionable intent, utilizes Gemini API to extract data, and integrates with user tools to asynchronously complete tasks.
+			\item Deployed containerized RAG pipeline on a FastAPI backend (AWS EC2 \& AWS RDS), incorporating sentiment analysis and Named Entity Recognition (NER), interpreting intent and disambiguating user commands.
+			\item Designed Electron and Next.js desktop client, incorporating OAuth2 authentication, OS keychain for secure credential storage, and RTC-based Voice Activity Detection with efficient audio chunk batching \& processing.
 			\item Improved Whisper model accuracy from 91\% to 98\% through spectral gating, denoising, and gain control.
-			\item Deployed containerized FastAPI backend on AWS EC2 instance with AWS RDS integration, optimized with lazy loading, and dependency injection.
-			\item Designed Electron and Next.js desktop client, integrating WebSockets and RTC-based Voice Activity Detection (VAD) for low-latency audio processing of user surroundings and commands.
-			% \item Implemented OAuth2 authentication, integrated OS keychain for secure credential storage, empowering cloud-based infrastructure for real-time synchronization and WebSocket updates.
 		\end{rSectionEntry}
 
-		\begin{rSectionEntry}{WizViz --- Multiplayer AR Wizard Game}{Feb. 2025}{SpartaHack X}{MediaPipe, OpenCV, PyGame}{}
-			\item Developed real-time multiplayer AR wizard-duel game using OpenCV and PyGame, winning the Interactive Media track among 100+ projects and 350+ participants at SpartaHack X.
-			\item Built a custom physics game engine with collision detection for gesture-based controls and interactions.
+		\begin{rSectionEntry}{WizViz --- Multiplayer AR Wizard Game}{Feb. 2025}{}{MediaPipe, OpenCV, PyGame}{}
+			\item Built award winning real-time multiplayer AR wizard-duel using OpenCV and PyGame at SpartaHack X.
 			\item Used MediaPipe Pose for skeletal tracking of 2 players on 33 landmarks with sub-20ms at 60 FPS.
+			% \item Developed custom physics game engine with collision detection for gesture-based controls.
 		\end{rSectionEntry}
 	\end{rSection}
 
@@ -60,7 +65,8 @@
 		\end{rSet}
 		\begin{rSet}{Databases}{PostgreSQL, Neo4jÍ, AWS RDS}
 		\end{rSet}
-		\begin{rSet}{Cloud \& DevOps}{Docker, Git, CI/CD, AWS (EC2, ECS, CloudWatch), Google Cloud Platform}
+		\begin{rSet}{Cloud \& DevOps}{Docker, Git, CI/CD, AWS (EC2, Lambda, CloudWatch), Google Cloud Platform}
+			\nopagebreak
 		\end{rSet}
 	\end{rSection}
 

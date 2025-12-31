@@ -25,10 +25,10 @@
 \pagestyle{empty}
 
 \geometry{
-	top=0.4in, % Top margin
-	bottom=0.4in, % Bottom margin
-	left=0.5in, % Left margin
-	right=0.5in, % Right margin
+	top=0.35in, % Top margin
+	bottom=0.3in, % Bottom margin
+	left=0.4in, % Left margin
+	right=0.4in, % Right margin
 	% showframe, % Uncomment to show how the type block is set on the page
 }
 
@@ -45,8 +45,8 @@
 
 \newcommand{\printcontact}{
 	\begin{center}
-		\def \\ {$\hspace{0.5em}|\hspace{0.7em}$}
-		{{\fontsize{11pt}{13pt}\selectfont\@contact}}
+		\def \\ {\hspace{0.5em}|\hspace{0.7em}}
+		{\fontsize{11pt}{13pt}\selectfont\@contact}
 	\end{center}
 }
 
@@ -62,7 +62,13 @@
 
 % Defines the rSection environment for the major sections within the resume
 \newenvironment{rSection}[2]{ % 2 Parameters: First letter, Section Title
-	\MakeUppercase{{\fontsize{14pt}{16pt}\selectfont #1}}$\hspace{0.05em}$\MakeUppercase{{\fontsize{11pt}{13pt}\selectfont #2}}
+	\MakeUppercase{
+		\fontsize{14pt}{16pt}\selectfont #1
+	}
+	\hspace{-1.4em}
+	\MakeUppercase{
+		\fontsize{11pt}{13pt}\selectfont #2
+	}
 	\vspace{0.3em}
 	\hrule
 	\vspace{-0.2em}
@@ -74,26 +80,43 @@
 	\end{list}
 }
 
-\newenvironment{rSectionEntry}[5]{ % 5 parameters: name, dates, tagline, tagline #2, location
+\newenvironment{rSectionEntry}[5]{ % 5 parameters: name, dates, position, technologies, location
 	\textbf{\fontsize{12pt}{14pt}\selectfont #1}
-	\ifthenelse{\equal{#4}{}}{}%
-		{\hspace{0.1em}|\hspace{0.25em}\selectfont\textit{#4}}
-	\hfill {#2}
-	\ifthenelse{\equal{#5}{}}{}{ % If the fifth parameter is empty, don't output parameters 3, 4, 5
-		\\
-		{#3\ifthenelse{\equal{#4}{}}{}{\hspace{0.1em}|\hspace{0.25em}\selectfont\textit{#4}}} \hfill {\selectfont\textit{#5}\hspace{0.35em}}
+	\ifthenelse{\equal{#4}{}}{}{
+		\hspace{-0.9em}
+		\textbf{\fontsize{15pt}{17pt} | }
+		\hspace{-0.6em}
+		\selectfont\textit #4
+		\vspace{-1.2em}
 	}
-	\begin{list}{$\hspace{1em}\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
-		\setlength{\itemsep}{-0.65em} \vspace{-0.7em} % Left is space between items, right is space before first item
+	\hfill {#2}
+	\\
+	\vspace{0.1em}
+	\ifthenelse{\equal{#5}{}}{}{ % If the fifth parameter is empty, don't output parameters 3, 4, 5
+		% \vspace{-1em}
+		#3
+		\ifthenelse{\equal{#4}{}}{}{
+			\hspace{-0.9em}
+			\textbf{\fontsize{15pt}{17pt} | }
+			\hspace{-0.6em}
+			\selectfont\textit #4
+		}
+		\hfill
+		\selectfont\textit #5
+	}
+	\begin{list}{$\bullet\hspace{0.2em}$}{\leftmargin=2.5em}
+		\setlength{\itemsep}{-0.6em} % Space between items
+		\vspace{-0.7em} % Space right before the first item
 }{
 	\end{list}
-	\vspace{-0.13em}
+	\vspace{-0.3em}
 }
 
-\newenvironment{rSet}[2] % 2 Parameters: Set title, set items
+\newenvironment{rSet}[2] % 2 Parameters: title, items
 {
 	\noindent
-	\begin{minipage}{\dimexpr\textwidth-1em\relax} % Subtract 1em from the width to compensate
+	\begin{minipage}{\dimexpr\textwidth-1em\relax}
 		{\fontsize{11.5pt}{13pt}\selectfont \textbf{#1}} \dotfill {\fontsize{11.5pt}{13pt}\selectfont #2}
 	\end{minipage}
-}{}
+}{
+}
